@@ -1,4 +1,4 @@
-name: Deploy to design.smart.coop
+name: Deploy to reference.smartcoop.sh
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
     - name: Build the static site
       run: npm run-script build
     - name: Re-establish the CNAME configuration
-      run: echo design.smart.coop > dist/CNAME
+      run: echo reference.smartcoop.sh > dist/CNAME
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
