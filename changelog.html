@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html class="u-maximize-height" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Changelog - Smart Design System
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="o-flex o-flex--vertical u-maximize-height">
+    <header id="header">
+        <div class="o-container">
+            <div class="c-navbar c-navbar--bordered-bottom c-navbar--main">
+                <div class="c-toolbar">
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <div class="c-brand c-brand--small">
+                                <a href="/">
+                                    <img src="/images/logo.svg" alt="Smart" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <!-- Nav for desktop-->
+                            <nav class="c-design-system-nav">
+                                <button class="c-button c-button--borderless c-button--icon c-design-system-nav-open" type="button" id="c-design-system-nav-open">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-menu  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <div class="u-sr-accessible">Open menu
+                                        </div>
+                                    </span>
+                                </button>
+                                <button class="c-button c-button--borderless c-button--icon c-design-system-nav-close" type="button" id="c-design-system-nav-close">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-close  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <div class="u-sr-accessible">Close menu
+                                        </div>
+                                    </span>
+                                </button>
+                                <div class="c-design-system-nav__mobile">
+                                    <ul>
+                                        <li>
+                                            <span>Design</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/design/how-it-works.html">Design workflow</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/design/in-practice/copywriting.html">Design system in practice</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>Development</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/development/getting-started.html">Getting started</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/package-and-repo-links.html">Package and repo links</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/browser-support.html">Browser support</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/writing-css/architecture.html">CSS architecture</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/writing-css/component-structure.html">CSS component structure</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>Examples</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/examples/templates.html">Example templates</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/prototypes/index.html">Prototypes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/examples/design-tests.html">Tests</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/development/component-documentation.html">Components</a>
+                                        </li>
+                                        <li>
+                                            <a href="/blog/index.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="/changelog.html">Changelog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="c-design-system-nav__desktop">
+                                    <ul class="c-pill-navigation">
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <!-- @todo now we are using menu.js, which is really meant for dropdowns. Make more accessible with aria-haspopup="true" aria-expanded="false", switch with JS?-->
+                                            <button type="button" data-menu="menu1" data-menu-samewidth="true">Design</button>
+                                            <ul class="c-menu c-menu--large" id="menu1">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/design/how-it-works.html">Design workflow</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/design/in-practice/copywriting.html">Design system in practice</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <button type="button" data-menu="menu2" data-menu-samewidth="true">Development</button>
+                                            <ul class="c-menu c-menu--large" id="menu2">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/getting-started.html">Getting started</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/package-and-repo-links.html">Package and repo links</a>
+                                                </li>
+                                                <li class="c-menu__divider" role="presentational"></li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/browser-support.html">Browser support</a>
+                                                </li>
+                                                <li class="c-menu__divider" role="presentational"></li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/writing-css/architecture.html">CSS architecture</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/writing-css/component-structure.html">CSS component structure</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <button type="button" data-menu="menu3" data-menu-samewidth="true">Templates</button>
+                                            <ul class="c-menu c-menu--large" id="menu3">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/examples/templates.html">Example templates</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/prototypes/index.html">Prototypes</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/examples/design-tests.html">Tests</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/development/component-documentation.html">Components</a>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/blog/index.html">Blog</a>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/changelog.html">Changelog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="o-container o-container--flex">
+        <div class="o-container o-container--medium">
+            <div class="o-container-vertical">
+                <div class="c-display">
+                    <h1>Changelog</h1>
+                    <p>This is the development changelog. For the design changelog, please refer to the <a href="/design/assets-and-resources.html">design assets and resources</a> page for more information.</p>
+                </div>
+                <hr class="c-hr">
+                <ul class="c-content">
+                    <li>
+                        <h3>August 16, 2022</h3>
+                        <ul>
+                            <li>Add missing icon files from the <a href="https://icons.mono.company/">Mono icon set</a>.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>January 24, 2022</h3>
+                        <ul>
+                            <li>Add <code>copy</code> icon</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>January 13, 2022</h3>
+                        <ul>
+                            <li>Add <a href="/development/docs/c-card.html#component-04-c-card-with-actions">card with actions</a> example to the documentation</li>
+                            <li>Rework structure of the <code>c-contract-card</code> component to simplify</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>December 16, 2021</h3>
+                        <ul>
+                            <li>Add <a href="/development/docs/c-error-page.html">error page component</a> and example <a href="/development/template-examples/404.html">404 error page</a> template</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>December 9, 2021</h3>
+                        <ul>
+                            <li>Remap colours to a lightness system, see <a href="/development/docs/aov-colors.html">colours documentation</a>
+                            </li>
+                            <li>Update the <a href="/development/docs/c-status-pill.html">status pill skins</a> with new colours</li>
+                            <li>Update the <a href="/development/docs/c-alert.html#component-05-c-alert-skins">alert skins</a> with new colours and add <a href="/development/docs/c-alert.html#component-06-c-alert-skins-light">lighter version of the alert skins</a> for longer content</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>December 8, 2021</h3>
+                        <ul>
+                            <li>Add c-checkbox-group mixin</li>
+                            <li>Support disabled forms and add <a href="/development/docs/o-form-group.html#component-06-o-form-disabled">disabled form example</a> to the components documentation</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>December 2, 2021</h3>
+                        <ul>
+                            <li>Add a mixin for the key value component and update <a href="/development/docs/c-key-value.html">key value list documentation</a>
+                            </li>
+                            <li>Implement design for an <a href="/development/trainings/administrative-profile.html">administrative profile screen</a> for an application for trainings and courses</li>
+                            <li>Add file attachment component and add <a href="/development/docs/c-file-attachment.html">file attachment documentation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 30, 2021</h3>
+                        <ul>
+                            <li>Add badge component and <a href="/development/docs/c-badge.html">badge documentation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 26, 2021</h3>
+                        <ul>
+                            <li>Update and simplify structure of c-form-group mixin by using <code>block</code> to nest different inputs instead of including all the types inside the c-form-group mixin.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 25, 2021</h3>
+                        <ul>
+                            <li>Swap out <code>color-gray-30</code> with <code>color-gray-25</code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 23, 2021</h3>
+                        <ul>
+                            <li>Add different states to <a href="/development/docs/c-file-upload.html">file upload documentation</a>
+                            </li>
+                            <li>Add <code>link</code> icon</li>
+                            <li>Sync button font weight with designs</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 22, 2021</h3>
+                        <ul>
+                            <li>Add progress bar component and <a href="/development/docs/c-progress-bar.html">progress bar documentation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 19, 2021</h3>
+                        <ul>
+                            <li>Add <a href="/development/docs/c-icon-list.html">icon list documentation</a>
+                            </li>
+                            <li>Add icon list component</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 18, 2021</h3>
+                        <ul>
+                            <li>Add <a href="/development/docs/c-card.html">card documentation</a>
+                            </li>
+                            <li>Split up panel component into panel and card component</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 17, 2021</h3>
+                        <ul>
+                            <li>Add <a href="/development/docs/c-navbar.html">navbar documentation</a>
+                            </li>
+                            <li>Improve <a href="/development/docs/c-tabs.html">tabs documentation</a>
+                            </li>
+                            <li>Add loader component and <a href="/development/docs/c-loader.html">loader documentation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 16, 2021</h3>
+                        <ul>
+                            <li>Make icons in buttons smaller and sync with designs</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 4, 2021</h3>
+                        <ul>
+                            <li>Update design system website navigation by adding an <a href="/development/example-pages.html">example pages</a> page</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>November 2, 2021</h3>
+                        <ul>
+                            <li>Add <a href="/development/design-tests/display-test.html">display test page</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 27, 2021</h3>
+                        <ul>
+                            <li>Fix rendering issue radio buttons</li>
+                            <li>Add <a href="/development/docs/c-hr.html">horizontal ruler documentation</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 22, 2021</h3>
+                        <ul>
+                            <li>Add compensation simulation <a href="/development/template-examples/tools-simulation.html">result</a>
+                            </li>
+                            <li>Add compensation simulation <a href="/development/template-examples/tools-simulation-loading.html">loading state</a>
+                            </li>
+                            <li>Add compensation simulation <a href="/development/template-examples/tools-simulation-empty.html">empty state</a>
+                            </li>
+                            <li>Add more options to <code>c-form-group</code> mixin</li>
+                            <li>Add <code>c-radio-button</code> mixin</li>
+                            <li>Improve alert colors</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 21, 2021</h3>
+                        <ul>
+                            <li>Add <a href="/development/template-examples/tools-contracts-empty.html">empty state</a> for contract list</li>
+                            <li>Add <a href="/development/docs/c-filter-pill.html">filter pill dropdown</a> example</li>
+                            <li>Unify empty state and blank slate component and improve <a href="/development/docs/c-blank-slate.html">blank slate</a> documentation</li>
+                            <li>Add and document <a href="/development/docs/c-spinner.html">spinner</a> component</li>
+                            <li>Add example of <a href="/development/docs/o-form-group.html#component-01-o-form-group">form group with helper</a> tooltip</li>
+                            <li>Add size parameter to <code>c-button</code> mixin</li>
+                            <li>Add <code>print</code> icon</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 20, 2021</h3>
+                        <ul>
+                            <li>Add <a href="/development/template-examples/tools-contracts.html">contract list</a> view</li>
+                            <li>Document <a href="/development/docs/c-pagination.html">pagination</a> component</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 15, 2021</h3>
+                        <ul>
+                            <li>Rename templates in overview list on getting started page</li>
+                            <li>Add <a href="/development/docs/c-filter-pill.html">filter pill</a> component</li>
+                            <li>Start <a href="/development/docs/aov-elevation.html">shadow system</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 14, 2021</h3>
+                        <ul>
+                            <li>Add horizontal scroll to top navigation to make it mobile friendlier</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 13, 2021</h3>
+                        <ul>
+                            <li>Replace links in top navigation with button elements for items that have sub menus</li>
+                            <li>Improve focus states of buttons (sync with designs)</li>
+                            <li>Sync toolbar title size with designs</li>
+                            <li>Replace <code>c-input-group</code> code used for search inputs with <code>c-input-with-icon</code> component</li>
+                            <li>Add <a href="/development/template-examples/horizontal-form.html">horizontal form</a> template</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 12, 2021</h3>
+                        <ul>
+                            <li>Add <a href="/development/docs/c-file-upload.html">file upload</a> component</li>
+                            <li>Complete <a href="/development/template-examples/register-form.html">register form</a> page with documents section</li>
+                            <li>Add <a href="/development/docs/c-key-value.html">key value</a> component</li>
+                            <li>Fix duplicate id's in register form</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 11, 2021</h3>
+                        <ul>
+                            <li>Add new mixins for <a href="/development/docs/c-input-group.html">input groups</a> with icon before and after</li>
+                            <li>Make <a href="/development/template-examples/register-form.html">register form</a> template more complete by adding more fields</li>
+                            <li>Simplify sidebar layout code</li>
+                            <li>Use c-brand mixin for logo in templates</li>
+                            <li>Move design system website specific code out of <code>c-navbar</code> styles</li>
+                            <li>Improve app structure by using header element</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 8, 2021</h3>
+                        <ul>
+                            <li>We released 1.0 of the design system; with an <a href="/blog/2021/10/08/smart-announces-an-open-design-system.html">introductory blog post</a>, and the release of community files on <a href="https://www.figma.com/@smartcoop">Figma</a>.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>October 7, 2021</h3>
+                        <ul>
+                            <li>Add example template of <a href="/development/template-examples/app-side-menu.html">page with side menu</a>
+                            </li>
+                            <li>Improve hide password functionality</a> by making it keyboard accessible and document <a href="/development/docs/c-input-icon.html#component-02-c-input-icon-toggle">password input</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>September 30, 2021</h3>
+                        <ul>
+                            <li>Improved sync for tooltip component between design system and dev</li>
+                            <li>Add description to global banner</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>September 23, 2021</h3>
+                        <ul>
+                            <li>Implement nicer overview for <a href="/development/component-documentation.html">component documentation</a>
+                            </li>
+                            <li>Add and document <a href="/development/docs/o-card-grid.html">card grid</a>
+                            </li>
+                            <li>Implement example of <a href="/development/template-examples/sign-in-form.html">sign in screen</a>
+                            </li>
+                            <li>Add and document <a href="/development/docs/c-tabs.html">tabs</a>
+                            </li>
+                            <li>Implement example of <a href="/development/docs/c-alert-stack.html">alert stack</a>
+                            </li>
+                            <li>Add and document <a href="/development/docs/c-wizard.html">wizard</a>, and add example template</li>
+                            <li>Dialogs: rename “modal” to “dialog” and add AlertDialog component (not tied to specific CSS yet)</li>
+                            <li>Add <a href="/development/docs/c-button-toolbar.html">button toolbar</a> component to group buttons together</li>
+                            <li>Add an example template which shows an <a href="/development/template-examples/app-datagrid.html">index page with the table component</a>
+                            </li>
+                            <li>Added <a href="/development/docs/c-global-banner.html">global banner</a> component</li>
+                            <li>Added icons: <code>facebook</code>, <code>twitter</code> and <code>instagram</code>
+                            </li>
+                            <li>Implement full-page example of <a href="/development/template-examples/dialog.html">dialog</a>
+                            </li>
+                            <li>Implement dropdowns on main menu</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>September 22, 2021</h3>
+                        <ul>
+                            <li>Improve structure of design system website, specifically adding a better “Getting started” section as well as grouping related content together</li>
+                            <li>Add <code>c-user-navigation</code> component</li>
+                            <li>Document input groups with prepend and append</li>
+                            <li>Improve main header with <code>c-pill-navigation</code> component, search input and </code>c-user-navigation</code> component</li>
+                            <li>Rename sample-page to app-form</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>September 21, 2021</h3>
+                        <ul>
+                            <li>Add accordion component and corresponding javascript</li>
+                            <li>Add blank slate component</li>
+                            <li>Add bordered list component</li>
+                            <li>Document container, grid, form-group, and flex objects</li>
+                            <li>Implement design system website base</li>
+                            <li>Remove sidebar from main template in favor of top menu</li>
+                            <li>Refactor side-menu component to be independent of any sidebar (sidebar currently does not exist anymore)</li>
+                            <li>Add icon: <code>github</code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>August 20, 2021</h3>
+                        <ul>
+                            <li>Remove missing stylesheet reference which was causing an error</li>
+                            <li>Improve spacing footer docs in styleguide</li>
+                            <li>Document spacer utilities</li>
+                            <li>Merge button skins and types into one document page</li>
+                            <li>Change buttonType prop to type for button mixins</li>
+                            <li>Move type and layout props up in props documentation for buttons</li>
+                            <li>Add Smart favicon</li>
+                            <li>Document semantic colors + add missing secondary colors</li>
+                            <li>Remove table row border from last rows</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>August 3, 2021</h3>
+                        <ul>
+                            <li>Add <a href="/development/template-examples/app-form.html">sample page</a>
+                            </li>
+                            <li>Add default layout template with sidebar</li>
+                            <li>Document select inputs in styleguide</li>
+                            <li>Add specific styles for textareas</li>
+                            <li>Update font to Cerebri Sans (to be discussed)</li>
+                            <li>Set default icon size to 24px</li>
+                            <li>Small updates to button styles</li>
+                            <li>Add and document <a href="/development/docs/c-sidebar.html">sidebar</a> component in styleguide</li>
+                            <li>Add and document <a href="/development/docs/c-popover.html">popover</a> component in styleguide</li>
+                            <li>Add and document <a href="/development/docs/c-tooltip.html">tooltip</a> component in styleguide</li>
+                            <li>Add and document <a href="/development/docs/c-dialog.html">dialog</a> component in styleguide</li>
+                            <li>Add and document <a href="/development/docs/c-dropdown.html">dropdown</a> component in styleguide</li>
+                            <li>Add and document <a href="/development/docs/c-status-pill.html">status pill</a> component in styleguide</li>
+                            <li>Add and document <a href="/development/docs/c-alert.html">alert</a> component in styleguide</li>
+                            <li>Add icons: <code>circle-check</code>, <code>circle-error</code>, <code>circle-help</code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>July 29, 2021</h3>
+                        <ul>
+                            <li>Add changelog page</li>
+                            <li>Add browser support page</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>July 28, 2021</h3>
+                        <ul>
+                            <li>Add Mono icons to repository</li>
+                            <li>Add inputs (toggles) to styleguide</li>
+                            <li>Add inputs (text) to styleguide</li>
+                            <li>Add avatars to styleguide</li>
+                            <li>Add button types to styleguide</li>
+                            <li>Add button skins to styleguide</li>
+                            <li>Add stylesheets for alerts, avatars, buttons, inputs, dialogs, navbars, toolbars, etc.</li>
+                            <li>Add CSS component structure page</li>
+                            <li>Add CSS architecture page</li>
+                            <li>Set up Bedrock</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="o-container-vertical">
+            <div class="o-container">
+                <hr class="c-hr">
+                <ul class="c-bordered-list-horizontal c-bordered-list-horizontal--muted">
+                    <li>
+                        <a href="https://github.com/smartcoop/design">
+                            <div class="o-flex">
+                                <div class="u-spacer-right-s">
+                                    <div class="o-svg-icon o-svg-icon-github  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </div>Share feedback on GitHub
+                            </div>
+                            <!--li: a(href="#") Licensing information
+                -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>

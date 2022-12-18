@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html class="br-styleguide br-styleguide-default-styles-active" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Form group - Component documentation - Smart Design System
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="o-flex o-flex--vertical u-maximize-height">
+    <header id="header">
+        <div class="o-container">
+            <div class="c-navbar c-navbar--bordered-bottom c-navbar--main">
+                <div class="c-toolbar">
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <div class="c-brand c-brand--small">
+                                <a href="/">
+                                    <img src="/images/logo.svg" alt="Smart" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <!-- Nav for desktop-->
+                            <nav class="c-design-system-nav">
+                                <button class="c-button c-button--borderless c-button--icon c-design-system-nav-open" type="button" id="c-design-system-nav-open">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-menu  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <div class="u-sr-accessible">Open menu
+                                        </div>
+                                    </span>
+                                </button>
+                                <button class="c-button c-button--borderless c-button--icon c-design-system-nav-close" type="button" id="c-design-system-nav-close">
+                                    <span class="c-button__content">
+                                        <div class="o-svg-icon o-svg-icon-close  ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#595959" />
+                                            </svg>
+                                        </div>
+                                        <div class="u-sr-accessible">Close menu
+                                        </div>
+                                    </span>
+                                </button>
+                                <div class="c-design-system-nav__mobile">
+                                    <ul>
+                                        <li>
+                                            <span>Design</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/design/how-it-works.html">Design workflow</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/design/in-practice/copywriting.html">Design system in practice</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>Development</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/development/getting-started.html">Getting started</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/package-and-repo-links.html">Package and repo links</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/browser-support.html">Browser support</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/writing-css/architecture.html">CSS architecture</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/development/writing-css/component-structure.html">CSS component structure</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>Examples</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="/examples/templates.html">Example templates</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/prototypes/index.html">Prototypes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/examples/design-tests.html">Tests</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/development/component-documentation.html">Components</a>
+                                        </li>
+                                        <li>
+                                            <a href="/blog/index.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="/changelog.html">Changelog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="c-design-system-nav__desktop">
+                                    <ul class="c-pill-navigation">
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <!-- @todo now we are using menu.js, which is really meant for dropdowns. Make more accessible with aria-haspopup="true" aria-expanded="false", switch with JS?-->
+                                            <button type="button" data-menu="menu1" data-menu-samewidth="true">Design</button>
+                                            <ul class="c-menu c-menu--large" id="menu1">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/design/how-it-works.html">Design workflow</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/design/in-practice/copywriting.html">Design system in practice</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <button type="button" data-menu="menu2" data-menu-samewidth="true">Development</button>
+                                            <ul class="c-menu c-menu--large" id="menu2">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/getting-started.html">Getting started</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/package-and-repo-links.html">Package and repo links</a>
+                                                </li>
+                                                <li class="c-menu__divider" role="presentational"></li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/browser-support.html">Browser support</a>
+                                                </li>
+                                                <li class="c-menu__divider" role="presentational"></li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/writing-css/architecture.html">CSS architecture</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/development/writing-css/component-structure.html">CSS component structure</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item c-pill-navigation__item--has-child-menu">
+                                            <button type="button" data-menu="menu3" data-menu-samewidth="true">Templates</button>
+                                            <ul class="c-menu c-menu--large" id="menu3">
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/examples/templates.html">Example templates</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/prototypes/index.html">Prototypes</a>
+                                                </li>
+                                                <li class="c-menu__item">
+                                                    <a class="c-menu__label" href="/examples/design-tests.html">Tests</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/development/component-documentation.html">Components</a>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/blog/index.html">Blog</a>
+                                        </li>
+                                        <li class="c-pill-navigation__item">
+                                            <a href="/changelog.html">Changelog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="o-container o-container--flex">
+        <div class="u-padding-bottom-l">
+            <h1 class="c-d-h2">Component documentation</h1>
+        </div>
+        <div class="o-grid">
+            <div class="o-grid-col-bp3-3">
+                <div class="u-spacer-bottom-l">
+                    <div class="c-input-with-icon">
+                        <div class="o-svg-icon o-svg-icon-search  ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.8487 17.3729 13.551 16.3199 14.9056L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L14.9056 16.3199C13.551 17.3729 11.8487 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="#595959" />
+                            </svg>
+                        </div>
+                        <input class="c-input c-input--max-width" id="styleguideSearch" type="search" placeholder="Search…">
+                    </div>
+                </div>
+                <div class="c-navbar-components u-padding-bottom-xl">
+                    <div class="c-navbar-components__header">
+                        <div class="c-toolbar">
+                            <div class="c-toolbar__left">
+                                <div class="c-toolbar__item">
+                                    <div class="c-toolbar-title">Components</div>
+                                </div>
+                            </div>
+                            <div class="c-toolbar__right">
+                                <div class="c-toolbar__item">
+                                    <button class="c-button c-button--borderless c-button--icon" type="button">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-chevron-down  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">Chevron down
+                                            </div>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-navbar-components__content">
+                        <div class="br-styleguide-nav-holder br-styleguide-nav-holder--mobile u-spacer-top-l u-padding-horizontal-l">
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Basics</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/aov-colors.html"> Colors</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/aov-elevation.html"> Elevation</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/aov-icons.html"> Icons</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/aov-typography.html"> Typography</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Components</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-accordion.html"> Accordion</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-alert-dialog.html"> Alert dialog</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-alert-stack.html"> Alert stack</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-alert.html"> Alert</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-avatar.html"> Avatar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-badge.html"> Badge</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-blank-slate.html"> Blank slate</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-bordered-list.html"> Bordered list</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-brand.html"> Brand</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-button-toolbar.html"> Button toolbar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-button.html"> Button</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-card.html"> Card</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-checkbox.html"> Checkbox</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-dialog.html"> Dialog</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-dropdown.html"> Dropdown</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-error-page.html"> Error page</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-file-attachment.html"> File attachment</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-file-upload.html"> File upload</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-filter-pill.html"> Filter pill</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-global-banner.html"> Global banner</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-hr.html"> Horizontal ruler</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-icon-list.html"> Icon list</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-input-group.html"> Input group</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-input-icon.html"> Input icon</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-input.html"> Input</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-key-value.html"> Key value list</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-loader.html"> Loader</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-multi-select.html"> Multi Select</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-navbar.html"> Navbar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-or.html"> Or</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-pagination.html"> Pagination</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-panel.html"> Panel</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-popover.html"> Popover</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-progress-bar.html"> Progress bar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-radio-button.html"> Radio button</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-select.html"> Select</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-side-menu.html"> Side menu</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-status-pill.html"> Status pill</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-table.html"> Table</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-tabs.html"> Tabs</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-textarea.html"> Textarea</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-toolbar.html"> Toolbar</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-tooltip.html"> Tooltip</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/c-wizard.html"> Wizard</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Objects</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/o-card-grid.html"> Card grid</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/o-container.html"> Container</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/o-flex.html"> Flexbox Layout</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/o-form-group.html"> Form group</a>
+                                        </li>
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/o-grid.html"> Grid</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="br-docs-category">
+                                <h4 class="br-docs-category-name c-h4">Utilities</h4>
+                                <div class="br-docs-category-list-wrapper">
+                                    <ul class="c-styleguide-list">
+                                        <li class="null ">
+                                            <a class="null " href="/development/docs/u-spacer.html"> Spacing utility classes</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-styleguide-nav-holder br-styleguide-nav-holder--desktop">
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Basics</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/aov-colors.html"> Colors</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/aov-elevation.html"> Elevation</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/aov-icons.html"> Icons</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/aov-typography.html"> Typography</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Components</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-accordion.html"> Accordion</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-alert-dialog.html"> Alert dialog</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-alert-stack.html"> Alert stack</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-alert.html"> Alert</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-avatar.html"> Avatar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-badge.html"> Badge</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-blank-slate.html"> Blank slate</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-bordered-list.html"> Bordered list</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-brand.html"> Brand</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-button-toolbar.html"> Button toolbar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-button.html"> Button</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-card.html"> Card</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-checkbox.html"> Checkbox</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-dialog.html"> Dialog</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-dropdown.html"> Dropdown</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-error-page.html"> Error page</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-file-attachment.html"> File attachment</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-file-upload.html"> File upload</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-filter-pill.html"> Filter pill</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-global-banner.html"> Global banner</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-hr.html"> Horizontal ruler</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-icon-list.html"> Icon list</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-input-group.html"> Input group</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-input-icon.html"> Input icon</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-input.html"> Input</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-key-value.html"> Key value list</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-loader.html"> Loader</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-multi-select.html"> Multi Select</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-navbar.html"> Navbar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-or.html"> Or</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-pagination.html"> Pagination</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-panel.html"> Panel</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-popover.html"> Popover</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-progress-bar.html"> Progress bar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-radio-button.html"> Radio button</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-select.html"> Select</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-side-menu.html"> Side menu</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-status-pill.html"> Status pill</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-table.html"> Table</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-tabs.html"> Tabs</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-textarea.html"> Textarea</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-toolbar.html"> Toolbar</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-tooltip.html"> Tooltip</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/c-wizard.html"> Wizard</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Objects</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-card-grid.html"> Card grid</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-container.html"> Container</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-flex.html"> Flexbox Layout</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-form-group.html"> Form group</a>
+                                </li>
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/o-grid.html"> Grid</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="br-docs-category">
+                        <h4 class="br-docs-category-name c-h4">Utilities</h4>
+                        <div class="br-docs-category-list-wrapper">
+                            <ul class="c-styleguide-list">
+                                <li class="null ">
+                                    <a class="null " href="/development/docs/u-spacer.html"> Spacing utility classes</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="o-grid-col-bp3-9">
+                <div class="br-componentgroup-header-wrapper">
+                    <h1 class="br-componentgroup-header c-d-h2">Form group</h1>
+                </div>
+                <div class="br-content c-content">
+                    <p>Use the form group object to control spacing and layout in forms.</p>
+
+                </div>
+                <div class="br-sample" id="component-01-o-form-group">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Regular form grouping</h3>
+                        <a class="br-sample-header-link" href="#component-01-o-form-group">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content">
+                        <p>The combination of a form label and an input field are usually wrapped inside a <code>.o-form-group</code> object. The consistent markup pattern makes it easy to manipulate grouped form elements.</p>
+                    </div>
+                    <div class="br-sample-content">
+                        <div class="o-form-group-layout o-form-group-layout--standard">
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="defaultFormNameId">Name</label>
+                                <div class="o-form-group__controls">
+                                    <input class="c-input" type="email" value="John Doe" id="defaultFormNameId" />
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="defaultFormEmailId">Email address</label>
+                                <div class="o-form-group__controls">
+                                    <input class="c-input" type="email" value="user@name.com" id="defaultFormEmailId" />
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="defaultFormpasswordId">Password</label>
+                                <div class="o-form-group__controls">
+                                    <div class="c-input-with-icon">
+                                        <input class="c-input" type="password" id="defaultFormpasswordId" />
+                                        <button class="c-input-with-icon__toggle" data-password-toggle="data-password-toggle">
+                                            <div class="o-svg-icon o-svg-icon-eye  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z" fill="#7A7A7A" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z" fill="#7A7A7A" />
+                                                    <path d="M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z" fill="#7A7A7A" />
+                                                    <path d="M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z" fill="#7A7A7A" />
+                                                </svg>
+                                            </div>
+                                            <div class="o-svg-icon o-svg-icon-eye-off  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0)">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z" fill="#7A7A7A" />
+                                                        <path d="M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z" fill="#7A7A7A" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0">
+                                                            <rect width="24" height="24" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <div class="o-form-group__label o-form-group__label--with-helper">
+                                    <label for="defaultFormSelectId">Preference</label>
+                                    <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="preference-tooltip" data-tooltip-placement="right">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                    <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                    <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">Show info
+                                            </div>
+                                        </span>
+                                    </button>
+                                    <div class="c-tooltip" role="tooltip" id="preference-tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
+                                    </div>
+                                </div>
+                                <div class="c-select-holder">
+                                    <select class="c-select" id="defaultFormSelectId">
+                                        <option>Option A</option>
+                                        <option>Option B</option>
+                                        <option>Option C</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <input class="c-button c-button--primary" type="submit" value="Save" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;defaultFormNameId&quot;&gt;Name&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;John Doe&quot; id=&quot;defaultFormNameId&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;defaultFormEmailId&quot;&gt;Email address&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;defaultFormEmailId&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;defaultFormpasswordId&quot;&gt;Password&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;div class=&quot;c-input-with-icon&quot;&gt;
+                &lt;input class=&quot;c-input&quot; type=&quot;password&quot; id=&quot;defaultFormpasswordId&quot; /&gt;
+                &lt;button class=&quot;c-input-with-icon__toggle&quot; data-password-toggle=&quot;data-password-toggle&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-eye  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;path d=&quot;M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;path d=&quot;M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-eye-off  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;g clip-path=&quot;url(#clip0)&quot;&gt;
+                                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                &lt;path d=&quot;M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;/g&gt;
+                            &lt;defs&gt;
+                                &lt;clipPath id=&quot;clip0&quot;&gt;
+                                    &lt;rect width=&quot;24&quot; height=&quot;24&quot; fill=&quot;white&quot; /&gt;
+                                &lt;/clipPath&gt;
+                            &lt;/defs&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;div class=&quot;o-form-group__label o-form-group__label--with-helper&quot;&gt;
+            &lt;label for=&quot;defaultFormSelectId&quot;&gt;Preference&lt;/label&gt;
+            &lt;button class=&quot;c-button c-button--borderless-muted c-button--small c-button--icon&quot; type=&quot;button&quot; data-tooltip=&quot;preference-tooltip&quot; data-tooltip-placement=&quot;right&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-circle-help  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z&quot; fill=&quot;#595959&quot; /&gt;
+                            &lt;path d=&quot;M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z&quot; fill=&quot;#595959&quot; /&gt;
+                            &lt;path d=&quot;M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;u-sr-accessible&quot;&gt;Show info
+                    &lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class=&quot;c-tooltip&quot; role=&quot;tooltip&quot; id=&quot;preference-tooltip&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                &lt;div class=&quot;c-tooltip__arrow&quot; data-popper-arrow=&quot;data-popper-arrow&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;c-select-holder&quot;&gt;
+            &lt;select class=&quot;c-select&quot; id=&quot;defaultFormSelectId&quot;&gt;
+                &lt;option&gt;Option A&lt;/option&gt;
+                &lt;option&gt;Option B&lt;/option&gt;
+                &lt;option&gt;Option C&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;input class=&quot;c-button c-button--primary&quot; type=&quot;submit&quot; value=&quot;Save&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
+
+    .o-form-group
+        label.o-form-group__label(for=&quot;defaultFormNameId&quot;) Name
+        .o-form-group__controls
+            input.c-input(type=&quot;email&quot; value=&quot;John Doe&quot; id=&quot;defaultFormNameId&quot;)
+
+    .o-form-group
+        label.o-form-group__label(for=&quot;defaultFormEmailId&quot;) Email address
+        .o-form-group__controls
+            input.c-input(type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;defaultFormEmailId&quot;)
+
+    .o-form-group
+        label.o-form-group__label(for=&quot;defaultFormpasswordId&quot;) Password
+        .o-form-group__controls
+            .c-input-with-icon
+                input.c-input(type=&quot;password&quot; id=&quot;defaultFormpasswordId&quot;)
+                button.c-input-with-icon__toggle(data-password-toggle)
+                    +icon('eye')
+                    +icon('eye-off')
+
+    .o-form-group
+        .o-form-group__label.o-form-group__label--with-helper
+            label(for=&quot;defaultFormSelectId&quot;) Preference
+            +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type=&quot;button&quot; data-tooltip=&quot;preference-tooltip&quot; data-tooltip-placement=&quot;right&quot;) Show info
+            .c-tooltip(role=&quot;tooltip&quot; id=&quot;preference-tooltip&quot;)
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .c-tooltip__arrow(data-popper-arrow)
+        .c-select-holder
+            select.c-select(id=&quot;defaultFormSelectId&quot;)
+                option Option A
+                option Option B
+                option Option C
+
+    .o-form-group
+        input.c-button.c-button--primary(type=&quot;submit&quot; value=&quot;Save&quot;)
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-02-o-form-horizontal">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Form (horizontal)</h3>
+                        <a class="br-sample-header-link" href="#component-02-o-form-horizontal">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <div class="o-form-group-layout o-form-group-layout--horizontal">
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="horizontalFormNameId">Name</label>
+                                <div class="o-form-group__controls">
+                                    <input class="c-input" type="email" value="John Doe" id="horizontalFormNameId" />
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="horizontalFormEmailId">Email address</label>
+                                <div class="o-form-group__controls">
+                                    <input class="c-input" type="email" value="user@name.com" id="horizontalFormEmailId" />
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="horizontalFormPasswordId">Password</label>
+                                <div class="o-form-group__controls">
+                                    <div class="c-input-with-icon">
+                                        <input class="c-input" type="password" id="horizontalFormPasswordId" />
+                                        <button class="c-input-with-icon__toggle" data-password-toggle="data-password-toggle">
+                                            <div class="o-svg-icon o-svg-icon-eye  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z" fill="#7A7A7A" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z" fill="#7A7A7A" />
+                                                    <path d="M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z" fill="#7A7A7A" />
+                                                    <path d="M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z" fill="#7A7A7A" />
+                                                </svg>
+                                            </div>
+                                            <div class="o-svg-icon o-svg-icon-eye-off  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0)">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z" fill="#7A7A7A" />
+                                                        <path d="M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z" fill="#7A7A7A" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0">
+                                                            <rect width="24" height="24" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <div class="o-form-group__label o-form-group__label--with-helper">
+                                    <label for="horizontalFormSelectId">Preference</label>
+                                    <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="preference-tooltip-2" data-tooltip-placement="right">
+                                        <span class="c-button__content">
+                                            <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                    <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                    <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                </svg>
+                                            </div>
+                                            <div class="u-sr-accessible">Show info
+                                            </div>
+                                        </span>
+                                    </button>
+                                    <div class="c-tooltip" role="tooltip" id="preference-tooltip-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
+                                    </div>
+                                </div>
+                                <div class="c-select-holder">
+                                    <select class="c-select" id="horizontalFormSelectId">
+                                        <option>Option A</option>
+                                        <option>Option B</option>
+                                        <option>Option C</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <input class="c-button c-button--primary" type="submit" value="Save" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--horizontal&quot;&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;horizontalFormNameId&quot;&gt;Name&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;John Doe&quot; id=&quot;horizontalFormNameId&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;horizontalFormEmailId&quot;&gt;Email address&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;horizontalFormEmailId&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;horizontalFormPasswordId&quot;&gt;Password&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;div class=&quot;c-input-with-icon&quot;&gt;
+                &lt;input class=&quot;c-input&quot; type=&quot;password&quot; id=&quot;horizontalFormPasswordId&quot; /&gt;
+                &lt;button class=&quot;c-input-with-icon__toggle&quot; data-password-toggle=&quot;data-password-toggle&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-eye  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;path d=&quot;M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;path d=&quot;M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-eye-off  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;g clip-path=&quot;url(#clip0)&quot;&gt;
+                                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                &lt;path d=&quot;M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;/g&gt;
+                            &lt;defs&gt;
+                                &lt;clipPath id=&quot;clip0&quot;&gt;
+                                    &lt;rect width=&quot;24&quot; height=&quot;24&quot; fill=&quot;white&quot; /&gt;
+                                &lt;/clipPath&gt;
+                            &lt;/defs&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;div class=&quot;o-form-group__label o-form-group__label--with-helper&quot;&gt;
+            &lt;label for=&quot;horizontalFormSelectId&quot;&gt;Preference&lt;/label&gt;
+            &lt;button class=&quot;c-button c-button--borderless-muted c-button--small c-button--icon&quot; type=&quot;button&quot; data-tooltip=&quot;preference-tooltip-2&quot; data-tooltip-placement=&quot;right&quot;&gt;
+                &lt;span class=&quot;c-button__content&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-circle-help  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path d=&quot;M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z&quot; fill=&quot;#595959&quot; /&gt;
+                            &lt;path d=&quot;M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z&quot; fill=&quot;#595959&quot; /&gt;
+                            &lt;path d=&quot;M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z&quot; fill=&quot;#595959&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;u-sr-accessible&quot;&gt;Show info
+                    &lt;/div&gt;
+                &lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class=&quot;c-tooltip&quot; role=&quot;tooltip&quot; id=&quot;preference-tooltip-2&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                &lt;div class=&quot;c-tooltip__arrow&quot; data-popper-arrow=&quot;data-popper-arrow&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;c-select-holder&quot;&gt;
+            &lt;select class=&quot;c-select&quot; id=&quot;horizontalFormSelectId&quot;&gt;
+                &lt;option&gt;Option A&lt;/option&gt;
+                &lt;option&gt;Option B&lt;/option&gt;
+                &lt;option&gt;Option C&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;input class=&quot;c-button c-button--primary&quot; type=&quot;submit&quot; value=&quot;Save&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--horizontal
+
+    .o-form-group
+        label.o-form-group__label(for=&quot;horizontalFormNameId&quot;) Name
+        .o-form-group__controls
+            input.c-input(type=&quot;email&quot; value=&quot;John Doe&quot; id=&quot;horizontalFormNameId&quot;)
+
+    .o-form-group
+        label.o-form-group__label(for=&quot;horizontalFormEmailId&quot;) Email address
+        .o-form-group__controls
+            input.c-input(type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;horizontalFormEmailId&quot;)
+
+    .o-form-group
+        label.o-form-group__label(for=&quot;horizontalFormPasswordId&quot;) Password
+        .o-form-group__controls
+            .c-input-with-icon
+                input.c-input(type=&quot;password&quot; id=&quot;horizontalFormPasswordId&quot;)
+                button.c-input-with-icon__toggle(data-password-toggle)
+                    +icon('eye')
+                    +icon('eye-off')
+
+    .o-form-group
+        .o-form-group__label.o-form-group__label--with-helper
+            label(for=&quot;horizontalFormSelectId&quot;) Preference
+            +c-button({ size: 'small', layout: 'icon-only', icon: 'circle-help', skin: 'borderless-muted' })(type=&quot;button&quot; data-tooltip=&quot;preference-tooltip-2&quot; data-tooltip-placement=&quot;right&quot;) Show info
+            .c-tooltip(role=&quot;tooltip&quot; id=&quot;preference-tooltip-2&quot;)
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .c-tooltip__arrow(data-popper-arrow)
+        .c-select-holder
+            select.c-select(id=&quot;horizontalFormSelectId&quot;)
+                option Option A
+                option Option B
+                option Option C
+
+    .o-form-group
+        input.c-button.c-button--primary(type=&quot;submit&quot; value=&quot;Save&quot;)
+
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-03-o-form-grid">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Form (grid)</h3>
+                        <a class="br-sample-header-link" href="#component-03-o-form-grid">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <div class="o-form-group-layout o-form-group-layout--standard">
+                            <div class="u-spacer-bottom">
+                                <div class="o-grid">
+                                    <div class="o-grid-col-6">
+                                        <div class="o-form-group">
+                                            <label class="o-form-group__label" for="formGridNameId">Name</label>
+                                            <div class="o-form-group__controls">
+                                                <input class="c-input" type="email" value="John Doe" id="formGridNameId" />
+                                            </div>
+                                        </div>
+                                        <div class="o-form-group">
+                                            <label class="o-form-group__label" for="formGridEmailId">Email address</label>
+                                            <div class="o-form-group__controls">
+                                                <input class="c-input" type="email" value="user@name.com" id="formGridEmailId" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o-grid-col-6">
+                                        <div class="o-form-group">
+                                            <label class="o-form-group__label" for="formGridPasswordId">Password</label>
+                                            <div class="o-form-group__controls">
+                                                <div class="c-input-with-icon">
+                                                    <input class="c-input" type="password" id="formGridPasswordId" />
+                                                    <button class="c-input-with-icon__toggle" data-password-toggle="data-password-toggle">
+                                                        <div class="o-svg-icon o-svg-icon-eye  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z" fill="#7A7A7A" />
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z" fill="#7A7A7A" />
+                                                                <path d="M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z" fill="#7A7A7A" />
+                                                                <path d="M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z" fill="#7A7A7A" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="o-svg-icon o-svg-icon-eye-off  ">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0)">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z" fill="#7A7A7A" />
+                                                                    <path d="M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z" fill="#7A7A7A" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0">
+                                                                        <rect width="24" height="24" fill="white" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="o-form-group">
+                                            <label class="o-form-group__label" for="formGridSelectId">Preference</label>
+                                            <div class="c-select-holder">
+                                                <select class="c-select" id="formGridSelectId">
+                                                    <option>Option A</option>
+                                                    <option>Option B</option>
+                                                    <option>Option C</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-toolbar">
+                                <div class="c-toolbar__right">
+                                    <div class="c-toolbar__item">
+                                        <button class="c-button c-button--borderless">Cancel</button>
+                                        <input class="c-button c-button--primary" type="submit" value="Save" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
+    &lt;div class=&quot;u-spacer-bottom&quot;&gt;
+        &lt;div class=&quot;o-grid&quot;&gt;
+            &lt;div class=&quot;o-grid-col-6&quot;&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;formGridNameId&quot;&gt;Name&lt;/label&gt;
+                    &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                        &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;John Doe&quot; id=&quot;formGridNameId&quot; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;formGridEmailId&quot;&gt;Email address&lt;/label&gt;
+                    &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                        &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;formGridEmailId&quot; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;o-grid-col-6&quot;&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;formGridPasswordId&quot;&gt;Password&lt;/label&gt;
+                    &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                        &lt;div class=&quot;c-input-with-icon&quot;&gt;
+                            &lt;input class=&quot;c-input&quot; type=&quot;password&quot; id=&quot;formGridPasswordId&quot; /&gt;
+                            &lt;button class=&quot;c-input-with-icon__toggle&quot; data-password-toggle=&quot;data-password-toggle&quot;&gt;
+                                &lt;div class=&quot;o-svg-icon o-svg-icon-eye  &quot;&gt;
+                                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                        &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                        &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                        &lt;path d=&quot;M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                        &lt;path d=&quot;M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                    &lt;/svg&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;o-svg-icon o-svg-icon-eye-off  &quot;&gt;
+                                    &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                        &lt;g clip-path=&quot;url(#clip0)&quot;&gt;
+                                            &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                            &lt;path d=&quot;M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                        &lt;/g&gt;
+                                        &lt;defs&gt;
+                                            &lt;clipPath id=&quot;clip0&quot;&gt;
+                                                &lt;rect width=&quot;24&quot; height=&quot;24&quot; fill=&quot;white&quot; /&gt;
+                                            &lt;/clipPath&gt;
+                                        &lt;/defs&gt;
+                                    &lt;/svg&gt;
+                                &lt;/div&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;o-form-group&quot;&gt;
+                    &lt;label class=&quot;o-form-group__label&quot; for=&quot;formGridSelectId&quot;&gt;Preference&lt;/label&gt;
+                    &lt;div class=&quot;c-select-holder&quot;&gt;
+                        &lt;select class=&quot;c-select&quot; id=&quot;formGridSelectId&quot;&gt;
+                            &lt;option&gt;Option A&lt;/option&gt;
+                            &lt;option&gt;Option B&lt;/option&gt;
+                            &lt;option&gt;Option C&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-toolbar&quot;&gt;
+        &lt;div class=&quot;c-toolbar__right&quot;&gt;
+            &lt;div class=&quot;c-toolbar__item&quot;&gt;
+                &lt;button class=&quot;c-button c-button--borderless&quot;&gt;Cancel&lt;/button&gt;
+                &lt;input class=&quot;c-button c-button--primary&quot; type=&quot;submit&quot; value=&quot;Save&quot; /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
+    .u-spacer-bottom
+        .o-grid
+            .o-grid-col-6
+                .o-form-group
+                    label.o-form-group__label(for=&quot;formGridNameId&quot;) Name
+                    .o-form-group__controls
+                        input.c-input(type=&quot;email&quot; value=&quot;John Doe&quot; id=&quot;formGridNameId&quot;)
+
+                .o-form-group
+                    label.o-form-group__label(for=&quot;formGridEmailId&quot;) Email address
+                    .o-form-group__controls
+                        input.c-input(type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;formGridEmailId&quot;)
+
+            .o-grid-col-6
+                .o-form-group
+                    label.o-form-group__label(for=&quot;formGridPasswordId&quot;) Password
+                    .o-form-group__controls
+                        .c-input-with-icon
+                            input.c-input(type=&quot;password&quot; id=&quot;formGridPasswordId&quot;)
+                            button.c-input-with-icon__toggle(data-password-toggle)
+                                +icon('eye')
+                                +icon('eye-off')
+
+                .o-form-group
+                    label.o-form-group__label(for=&quot;formGridSelectId&quot;) Preference
+                    .c-select-holder
+                        select.c-select(id=&quot;formGridSelectId&quot;)
+                            option Option A
+                            option Option B
+                            option Option C
+
+    .c-toolbar
+        .c-toolbar__right
+            .c-toolbar__item
+                button.c-button.c-button--borderless Cancel
+                input.c-button.c-button--primary(type=&quot;submit&quot; value=&quot;Save&quot;)
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-04-o-form-inline">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Form (inline)</h3>
+                        <a class="br-sample-header-link" href="#component-04-o-form-inline">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <div class="o-form-group-layout o-form-group-layout--inline">
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="inlineFormEmailId">Email address</label>
+                                <div class="o-form-group__controls">
+                                    <input class="c-input" type="email" value="user@name.com" id="inlineFormEmailId" />
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <label class="o-form-group__label" for="inlineFormPasswordId">Password</label>
+                                <div class="o-form-group__controls">
+                                    <div class="c-input-with-icon">
+                                        <input class="c-input" type="password" id="inlineFormPasswordId" />
+                                        <button class="c-input-with-icon__toggle" data-password-toggle="data-password-toggle">
+                                            <div class="o-svg-icon o-svg-icon-eye  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z" fill="#7A7A7A" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z" fill="#7A7A7A" />
+                                                    <path d="M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z" fill="#7A7A7A" />
+                                                    <path d="M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z" fill="#7A7A7A" />
+                                                </svg>
+                                            </div>
+                                            <div class="o-svg-icon o-svg-icon-eye-off  ">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0)">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z" fill="#7A7A7A" />
+                                                        <path d="M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z" fill="#7A7A7A" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0">
+                                                            <rect width="24" height="24" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o-form-group">
+                                <input class="c-button c-button--primary" type="submit" value="Save" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--inline&quot;&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;inlineFormEmailId&quot;&gt;Email address&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;inlineFormEmailId&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;inlineFormPasswordId&quot;&gt;Password&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;div class=&quot;c-input-with-icon&quot;&gt;
+                &lt;input class=&quot;c-input&quot; type=&quot;password&quot; id=&quot;inlineFormPasswordId&quot; /&gt;
+                &lt;button class=&quot;c-input-with-icon__toggle&quot; data-password-toggle=&quot;data-password-toggle&quot;&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-eye  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;path d=&quot;M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;path d=&quot;M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;o-svg-icon o-svg-icon-eye-off  &quot;&gt;
+                        &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;g clip-path=&quot;url(#clip0)&quot;&gt;
+                                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                &lt;path d=&quot;M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;/g&gt;
+                            &lt;defs&gt;
+                                &lt;clipPath id=&quot;clip0&quot;&gt;
+                                    &lt;rect width=&quot;24&quot; height=&quot;24&quot; fill=&quot;white&quot; /&gt;
+                                &lt;/clipPath&gt;
+                            &lt;/defs&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;input class=&quot;c-button c-button--primary&quot; type=&quot;submit&quot; value=&quot;Save&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--inline
+
+    .o-form-group
+        label.o-form-group__label(for=&quot;inlineFormEmailId&quot;) Email address
+        .o-form-group__controls
+            input.c-input(type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;inlineFormEmailId&quot;)
+
+    .o-form-group
+        label.o-form-group__label(for=&quot;inlineFormPasswordId&quot;) Password
+        .o-form-group__controls
+            .c-input-with-icon
+                input.c-input(type=&quot;password&quot; id=&quot;inlineFormPasswordId&quot;)
+                button.c-input-with-icon__toggle(data-password-toggle)
+                    +icon('eye')
+                    +icon('eye-off')
+
+    .o-form-group
+        input.c-button.c-button--primary(type=&quot;submit&quot; value=&quot;Save&quot;)
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-05-o-form-validation">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Form validation</h3>
+                        <a class="br-sample-header-link" href="#component-05-o-form-validation">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <div class="o-form-group-layout o-form-group-layout--standard">
+                            <div class="o-form-group o-form-group--error">
+                                <label class="o-form-group__label" for="formValidationnameId">Name</label>
+                                <div class="o-form-group__controls">
+                                    <input class="c-input" type="email" value="John Doe" id="formValidationnameId" />
+                                    <div class="c-form-help-text c-form-help-text--error">Please enter a valid name</div>
+                                </div>
+                            </div>
+                            <div class="o-form-group o-form-group--error">
+                                <label class="o-form-group__label" for="formValidationEmailId">Email address</label>
+                                <div class="o-form-group__controls">
+                                    <input class="c-input" type="email" value="user@name.com" id="formValidationEmailId" />
+                                    <div class="c-form-help-text c-form-help-text--error">Please enter a valid email address</div>
+                                </div>
+                            </div>
+                            <div class="o-form-group o-form-group--error">
+                                <label class="o-form-group__label">Value</label>
+                                <div class="o-form-group__controls">
+                                    <div class="c-radio-group c-radio-group--inline">
+                                        <div class="c-radio">
+                                            <label>
+                                                <input type="radio" name="radio12" />Inline Value 1
+                                            </label>
+                                        </div>
+                                        <div class="c-radio">
+                                            <label>
+                                                <input type="radio" name="radio12" />Inline Value 2
+                                            </label>
+                                        </div>
+                                        <div class="c-radio">
+                                            <label>
+                                                <input type="radio" name="radio12" checked="checked" />Inline Value 3
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="c-form-help-text c-form-help-text--error">Please enter another option.</div>
+                                </div>
+                            </div>
+                            <div class="o-form-group o-form-group--error">
+                                <label class="o-form-group__label" for="formValidationSelectId">Preference</label>
+                                <div class="c-select-holder">
+                                    <select class="c-select" id="formValidationSelectId">
+                                        <option>Option A</option>
+                                        <option>Option B</option>
+                                        <option>Option C</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="o-form-group o-form-group--error">
+                                <label class="o-form-group__label" for="textareaId">Label</label>
+                                <textarea class="c-textarea" rows="5" id="textareaId"></textarea>
+                            </div>
+                            <div class="o-form-group">
+                                <input class="c-button c-button--primary" type="submit" value="Save" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;div class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
+    &lt;div class=&quot;o-form-group o-form-group--error&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;formValidationnameId&quot;&gt;Name&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;John Doe&quot; id=&quot;formValidationnameId&quot; /&gt;
+            &lt;div class=&quot;c-form-help-text c-form-help-text--error&quot;&gt;Please enter a valid name&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group o-form-group--error&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;formValidationEmailId&quot;&gt;Email address&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;formValidationEmailId&quot; /&gt;
+            &lt;div class=&quot;c-form-help-text c-form-help-text--error&quot;&gt;Please enter a valid email address&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group o-form-group--error&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot;&gt;Value&lt;/label&gt;
+        &lt;div class=&quot;o-form-group__controls&quot;&gt;
+            &lt;div class=&quot;c-radio-group c-radio-group--inline&quot;&gt;
+                &lt;div class=&quot;c-radio&quot;&gt;
+                    &lt;label&gt;
+                        &lt;input type=&quot;radio&quot; name=&quot;radio12&quot; /&gt;Inline Value 1
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;c-radio&quot;&gt;
+                    &lt;label&gt;
+                        &lt;input type=&quot;radio&quot; name=&quot;radio12&quot; /&gt;Inline Value 2
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;c-radio&quot;&gt;
+                    &lt;label&gt;
+                        &lt;input type=&quot;radio&quot; name=&quot;radio12&quot; checked=&quot;checked&quot; /&gt;Inline Value 3
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;c-form-help-text c-form-help-text--error&quot;&gt;Please enter another option.&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group o-form-group--error&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;formValidationSelectId&quot;&gt;Preference&lt;/label&gt;
+        &lt;div class=&quot;c-select-holder&quot;&gt;
+            &lt;select class=&quot;c-select&quot; id=&quot;formValidationSelectId&quot;&gt;
+                &lt;option&gt;Option A&lt;/option&gt;
+                &lt;option&gt;Option B&lt;/option&gt;
+                &lt;option&gt;Option C&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group o-form-group--error&quot;&gt;
+        &lt;label class=&quot;o-form-group__label&quot; for=&quot;textareaId&quot;&gt;Label&lt;/label&gt;
+        &lt;textarea class=&quot;c-textarea&quot; rows=&quot;5&quot; id=&quot;textareaId&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-form-group&quot;&gt;
+        &lt;input class=&quot;c-button c-button--primary&quot; type=&quot;submit&quot; value=&quot;Save&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">.o-form-group-layout.o-form-group-layout--standard
+
+    .o-form-group.o-form-group--error
+        label.o-form-group__label(for=&quot;formValidationnameId&quot;) Name
+        .o-form-group__controls
+            input.c-input(type=&quot;email&quot; value=&quot;John Doe&quot; id=&quot;formValidationnameId&quot;)
+            .c-form-help-text.c-form-help-text--error Please enter a valid name
+    .o-form-group.o-form-group--error
+        label.o-form-group__label(for=&quot;formValidationEmailId&quot;) Email address
+        .o-form-group__controls
+            input.c-input(type=&quot;email&quot; value=&quot;user@name.com&quot; id=&quot;formValidationEmailId&quot;)
+            .c-form-help-text.c-form-help-text--error Please enter a valid email address
+
+    .o-form-group.o-form-group--error
+        label.o-form-group__label Value
+        .o-form-group__controls
+            .c-radio-group.c-radio-group--inline
+                .c-radio
+                    label
+                        input(type=&quot;radio&quot; name=&quot;radio12&quot;)
+                        | Inline Value 1
+                .c-radio
+                    label
+                        input(type=&quot;radio&quot; name=&quot;radio12&quot;)
+                        | Inline Value 2
+                .c-radio
+                    label
+                        input(type=&quot;radio&quot; name=&quot;radio12&quot; checked)
+                        | Inline Value 3
+            .c-form-help-text.c-form-help-text--error Please enter another option.
+
+    .o-form-group.o-form-group--error
+        label.o-form-group__label(for=&quot;formValidationSelectId&quot;) Preference
+        .c-select-holder
+            select.c-select(id=&quot;formValidationSelectId&quot;)
+                option Option A
+                option Option B
+                option Option C
+
+    .o-form-group.o-form-group--error
+        label.o-form-group__label(for=&quot;textareaId&quot;) Label
+        textarea.c-textarea(rows=&quot;5&quot; id=&quot;textareaId&quot;)
+
+    .o-form-group
+        input.c-button.c-button--primary(type=&quot;submit&quot; value=&quot;Save&quot;)
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="br-sample" id="component-06-o-form-disabled">
+                    <div class="br-sample-header br-sample-clearfix">
+                        <h3 class="br-sample-heading c-h3">Form disabled</h3>
+                        <a class="br-sample-header-link" href="#component-06-o-form-disabled">#</a>
+                    </div>
+                    <div class="br-sample-documentation c-content"></div>
+                    <div class="br-sample-content">
+                        <form class="o-form-group-layout o-form-group-layout--standard">
+                            <fieldset disabled="disabled">
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="disabledFormNameId">Name</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="disabledFormNameId" value="John Doe" />
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="disabledFormEmailId">Email</label>
+                                    <div class="o-form-group__controls">
+                                        <input class="c-input" type="text" id="disabledFormEmailId" value="user@name.com" />
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="disabledFormPasswordId">Password</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-input-with-icon">
+                                            <input class="c-input" type="password" id="disabledFormPasswordId" value="password" />
+                                            <button class="c-input-with-icon__toggle" data-password-toggle="data-password-toggle">
+                                                <div class="o-svg-icon o-svg-icon-eye  ">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z" fill="#7A7A7A" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z" fill="#7A7A7A" />
+                                                        <path d="M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z" fill="#7A7A7A" />
+                                                        <path d="M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z" fill="#7A7A7A" />
+                                                    </svg>
+                                                </div>
+                                                <div class="o-svg-icon o-svg-icon-eye-off  ">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0)">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z" fill="#7A7A7A" />
+                                                            <path d="M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z" fill="#7A7A7A" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0">
+                                                                <rect width="24" height="24" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <div class="o-form-group__label o-form-group__label--with-helper">
+                                        <label for="disabledFormPreferenceId">Preference</label>
+                                        <button class="c-button c-button--borderless-muted c-button--small c-button--icon" type="button" data-tooltip="helper-disabledFormPreferenceId" data-tooltip-placement="right">
+                                            <span class="c-button__content">
+                                                <div class="o-svg-icon o-svg-icon-circle-help  ">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z" fill="#595959" />
+                                                        <path d="M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z" fill="#595959" />
+                                                        <path d="M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z" fill="#595959" />
+                                                    </svg>
+                                                </div>
+                                                <div class="u-sr-accessible">Show info
+                                                </div>
+                                            </span>
+                                        </button>
+                                        <div class="c-tooltip" role="tooltip" id="helper-disabledFormPreferenceId">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                                            <div class="c-tooltip__arrow" data-popper-arrow="data-popper-arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-select-holder">
+                                            <select class="c-select" id="disabledFormPreferenceId">
+                                                <option>Option A</option>
+                                                <option>Option B</option>
+                                                <option>Option C</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="disabledFormTextareaId">Price</label>
+                                    <div class="o-form-group__controls">
+                                        <textarea class="c-textarea" rows="5" id="textarea"></textarea>
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label" for="disabledFormPriceId">Price</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-input-group">
+                                            <div class="c-input-group__input">
+                                                <input class="c-input" type="number" id="disabledFormPriceId" value="1000" />
+                                            </div>
+                                            <div class="c-input-group__append">
+                                                <span>€</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label">Radio</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-radio-group c-radio-group--inline">
+                                            <div class="c-radio">
+                                                <label>
+                                                    <input type="radio" name="disabledFormRadio" checked="checked" />Option A
+                                                </label>
+                                            </div>
+                                            <div class="c-radio">
+                                                <label>
+                                                    <input type="radio" name="disabledFormRadio" />Option B
+                                                </label>
+                                            </div>
+                                            <div class="c-radio">
+                                                <label>
+                                                    <input type="radio" name="disabledFormRadio" />Option C
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <label class="o-form-group__label">Checkbox</label>
+                                    <div class="o-form-group__controls">
+                                        <div class="c-checkbox-group c-checkbox-group--inline">
+                                            <div class="c-checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="disabledFormCheckbox" checked="checked" />Value 1
+                                                </label>
+                                            </div>
+                                            <div class="c-checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="disabledFormCheckbox" />Value 2
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o-form-group">
+                                    <input class="c-button c-button--primary" type="submit" value="Save" />
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="br-sample-footer">
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-html c-button c-button--secondary c-button--small">Show HTML code</button>
+                        <button class="br-sample-show-code-btn br-sample-show-code-btn-pug c-button c-button--secondary c-button--small">Show Pug code</button>
+                        <div class="br-sample-code br-sample-code-html">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-html">&lt;form class=&quot;o-form-group-layout o-form-group-layout--standard&quot;&gt;
+    &lt;fieldset disabled=&quot;disabled&quot;&gt;
+        &lt;div class=&quot;o-form-group&quot;&gt;
+            &lt;label class=&quot;o-form-group__label&quot; for=&quot;disabledFormNameId&quot;&gt;Name&lt;/label&gt;
+            &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                &lt;input class=&quot;c-input&quot; type=&quot;text&quot; id=&quot;disabledFormNameId&quot; value=&quot;John Doe&quot; /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;o-form-group&quot;&gt;
+            &lt;label class=&quot;o-form-group__label&quot; for=&quot;disabledFormEmailId&quot;&gt;Email&lt;/label&gt;
+            &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                &lt;input class=&quot;c-input&quot; type=&quot;text&quot; id=&quot;disabledFormEmailId&quot; value=&quot;user@name.com&quot; /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;o-form-group&quot;&gt;
+            &lt;label class=&quot;o-form-group__label&quot; for=&quot;disabledFormPasswordId&quot;&gt;Password&lt;/label&gt;
+            &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                &lt;div class=&quot;c-input-with-icon&quot;&gt;
+                    &lt;input class=&quot;c-input&quot; type=&quot;password&quot; id=&quot;disabledFormPasswordId&quot; value=&quot;password&quot; /&gt;
+                    &lt;button class=&quot;c-input-with-icon__toggle&quot; data-password-toggle=&quot;data-password-toggle&quot;&gt;
+                        &lt;div class=&quot;o-svg-icon o-svg-icon-eye  &quot;&gt;
+                            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M12 8C9.79087 8 8.00001 9.79086 8.00001 12C8.00001 14.2091 9.79087 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M23.8941 11.5521C23.8943 11.5525 23.8944 11.5528 23 12C23.8944 12.4472 23.8943 12.4475 23.8941 12.4479L23.8925 12.4511L23.889 12.458L23.8777 12.4802C23.8681 12.4987 23.8547 12.5247 23.8373 12.5576C23.8025 12.6233 23.752 12.7168 23.686 12.834C23.5542 13.0684 23.3602 13.3985 23.1057 13.7925C22.5979 14.5787 21.8432 15.6294 20.8545 16.6839C18.8955 18.7736 15.8995 21 12 21C8.1005 21 5.10449 18.7736 3.14547 16.6839C2.15684 15.6294 1.40207 14.5787 0.894343 13.7925C0.639857 13.3985 0.445799 13.0684 0.313979 12.834C0.248031 12.7168 0.197547 12.6233 0.162761 12.5576C0.145364 12.5247 0.131882 12.4987 0.122345 12.4802L0.110997 12.458L0.107546 12.4511L0.106377 12.4488C0.106194 12.4484 0.10558 12.4472 1.00001 12C0.10558 11.5528 0.105748 11.5525 0.105932 11.5521L0.107546 11.5489L0.110997 11.542L0.122345 11.5198C0.131882 11.5013 0.145364 11.4753 0.162761 11.4424C0.197547 11.3767 0.248031 11.2832 0.313979 11.166C0.445799 10.9316 0.639857 10.6015 0.894343 10.2075C1.40207 9.42131 2.15684 8.3706 3.14547 7.31606C5.10449 5.22644 8.1005 3 12 3C15.8995 3 18.8955 5.22644 20.8545 7.31606C21.8432 8.3706 22.5979 9.42131 23.1057 10.2075C23.3602 10.6015 23.5542 10.9316 23.686 11.166C23.752 11.2832 23.8025 11.3767 23.8373 11.4424C23.8547 11.4753 23.8681 11.5013 23.8777 11.5198L23.889 11.542L23.8925 11.5489L23.8941 11.5521ZM2.57442 12.7075C2.39493 12.4296 2.25004 12.1889 2.14075 12C2.25004 11.8111 2.39493 11.5704 2.57442 11.2925C3.03544 10.5787 3.71817 9.6294 4.60454 8.68394C6.39553 6.77356 8.89952 5 12 5C15.1005 5 17.6045 6.77356 19.3955 8.68394C20.2818 9.6294 20.9646 10.5787 21.4256 11.2925C21.6051 11.5704 21.75 11.8111 21.8593 12C21.75 12.1889 21.6051 12.4296 21.4256 12.7075C20.9646 13.4213 20.2818 14.3706 19.3955 15.3161C17.6045 17.2264 15.1005 19 12 19C8.89952 19 6.39553 17.2264 4.60454 15.3161C3.71817 14.3706 3.03544 13.4213 2.57442 12.7075Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                &lt;path d=&quot;M23 12L23.8941 11.5521C24.0348 11.8336 24.0348 12.1664 23.8941 12.4479L23 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                &lt;path d=&quot;M0.105932 11.5521L1.00001 12L0.10558 12.4472C-0.0351837 12.1657 -0.0348316 11.8336 0.105932 11.5521Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;o-svg-icon o-svg-icon-eye-off  &quot;&gt;
+                            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                &lt;g clip-path=&quot;url(#clip0)&quot;&gt;
+                                    &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.70001 0.3L23.7 22.3C24.1 22.7 24.1 23.3 23.7 23.7C23.5 23.9 23.2 24 23 24C22.8 24 22.5 23.9 22.3 23.7L17.8 19.2C16.1 20.4 14.1 21 12 21C4.50001 21 0.300012 12.8 0.100012 12.4C-0.0999878 12.1 -0.0999878 11.8 0.100012 11.5C1.30001 9.4 2.80001 7.6 4.60001 6L0.300012 1.7C-0.0999878 1.3 -0.0999878 0.7 0.300012 0.3C0.700012 -0.1 1.30001 -0.1 1.70001 0.3ZM12.5 13.9L10 11.4C10 11.5652 9.96971 11.7 9.94246 11.8212C9.92022 11.9202 9.90001 12.0101 9.90001 12.1C9.90001 12.6 10.1 13.1 10.5 13.5C10.9 13.8 11.4 14 11.9 14C12.1 14 12.3 14 12.5 13.9ZM2.10001 12C3.10001 13.6 6.60001 19 12 19C13.5 19 15 18.6 16.3 17.9L14 15.6C13.4 15.9 12.7 16.2 12 16.2H11.9C10.9 16.2 9.90001 15.8 9.20001 15.1C8.40001 14.4 7.90001 13.4 7.90001 12.3C7.90001 11.5 8.10001 10.7 8.50001 10L6.00001 7.4C4.40001 8.7 3.10001 10.2 2.10001 12Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                    &lt;path d=&quot;M12 5C11.4 5 10.7 5.1 10.1 5.2C9.60001 5.3 9.00001 5.1 8.90001 4.5C8.80001 3.9 9.10001 3.4 9.70001 3.3C10.4 3.1 11.2 3 12 3C18.8027 3 22.8905 9.74605 23.741 11.1498C23.8282 11.2936 23.8814 11.3814 23.9 11.4C24.1 11.7 24.1 12 23.9 12.3C23.2 13.5 22.5 14.7 21.6 15.7C21.4 16 21.1 16.1 20.8 16.1C20.6 16.1 20.4 16.1 20.2 15.9C19.8 15.6 19.7 14.9 20.1 14.5C20.8 13.8 21.4 12.9 21.9 12C20.9 10.4 17.4 5 12 5Z&quot; fill=&quot;#7A7A7A&quot; /&gt;
+                                &lt;/g&gt;
+                                &lt;defs&gt;
+                                    &lt;clipPath id=&quot;clip0&quot;&gt;
+                                        &lt;rect width=&quot;24&quot; height=&quot;24&quot; fill=&quot;white&quot; /&gt;
+                                    &lt;/clipPath&gt;
+                                &lt;/defs&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;o-form-group&quot;&gt;
+            &lt;div class=&quot;o-form-group__label o-form-group__label--with-helper&quot;&gt;
+                &lt;label for=&quot;disabledFormPreferenceId&quot;&gt;Preference&lt;/label&gt;
+                &lt;button class=&quot;c-button c-button--borderless-muted c-button--small c-button--icon&quot; type=&quot;button&quot; data-tooltip=&quot;helper-disabledFormPreferenceId&quot; data-tooltip-placement=&quot;right&quot;&gt;
+                    &lt;span class=&quot;c-button__content&quot;&gt;
+                        &lt;div class=&quot;o-svg-icon o-svg-icon-circle-help  &quot;&gt;
+                            &lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                &lt;path d=&quot;M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12Z&quot; fill=&quot;#595959&quot; /&gt;
+                                &lt;path d=&quot;M12 14C11.7348 14 11.4804 13.8946 11.2929 13.7071C11.1054 13.5196 11 13.2652 11 13V12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14ZM10.5 16.5C10.5 16.1022 10.658 15.7206 10.9393 15.4393C11.2206 15.158 11.6022 15 12 15C12.3978 15 12.7794 15.158 13.0607 15.4393C13.342 15.7206 13.5 16.1022 13.5 16.5C13.5 16.8978 13.342 17.2794 13.0607 17.5607C12.7794 17.842 12.3978 18 12 18C11.6022 18 11.2206 17.842 10.9393 17.5607C10.658 17.2794 10.5 16.8978 10.5 16.5Z&quot; fill=&quot;#595959&quot; /&gt;
+                                &lt;path d=&quot;M12.3899 7.811C11.4329 7.766 10.6299 8.301 10.4859 9.164C10.4356 9.41907 10.2878 9.6445 10.0741 9.79249C9.86029 9.94047 9.59729 9.99938 9.34081 9.95672C9.08434 9.91406 8.85456 9.77319 8.7002 9.56397C8.54584 9.35476 8.47903 9.09364 8.51394 8.836C8.86994 6.7 10.8169 5.734 12.4849 5.814C13.3389 5.854 14.2179 6.161 14.8939 6.793C15.5869 7.44 15.9999 8.368 15.9999 9.5C15.9999 10.791 15.4919 11.749 14.6169 12.332C13.8139 12.867 12.8289 13 11.9999 13C11.7347 13 11.4804 12.8946 11.2928 12.7071C11.1053 12.5196 10.9999 12.2652 10.9999 12C10.9999 11.7348 11.1053 11.4804 11.2928 11.2929C11.4804 11.1054 11.7347 11 11.9999 11C12.6699 11 13.1859 10.883 13.5079 10.668C13.7579 10.501 13.9999 10.208 13.9999 9.5C13.9999 8.882 13.7879 8.497 13.5279 8.254C13.2509 7.995 12.8479 7.834 12.3899 7.811Z&quot; fill=&quot;#595959&quot; /&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;u-sr-accessible&quot;&gt;Show info
+                        &lt;/div&gt;
+                    &lt;/span&gt;
+                &lt;/button&gt;
+                &lt;div class=&quot;c-tooltip&quot; role=&quot;tooltip&quot; id=&quot;helper-disabledFormPreferenceId&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.
+                    &lt;div class=&quot;c-tooltip__arrow&quot; data-popper-arrow=&quot;data-popper-arrow&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                &lt;div class=&quot;c-select-holder&quot;&gt;
+                    &lt;select class=&quot;c-select&quot; id=&quot;disabledFormPreferenceId&quot;&gt;
+                        &lt;option&gt;Option A&lt;/option&gt;
+                        &lt;option&gt;Option B&lt;/option&gt;
+                        &lt;option&gt;Option C&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;o-form-group&quot;&gt;
+            &lt;label class=&quot;o-form-group__label&quot; for=&quot;disabledFormTextareaId&quot;&gt;Price&lt;/label&gt;
+            &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                &lt;textarea class=&quot;c-textarea&quot; rows=&quot;5&quot; id=&quot;textarea&quot;&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;o-form-group&quot;&gt;
+            &lt;label class=&quot;o-form-group__label&quot; for=&quot;disabledFormPriceId&quot;&gt;Price&lt;/label&gt;
+            &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                &lt;div class=&quot;c-input-group&quot;&gt;
+                    &lt;div class=&quot;c-input-group__input&quot;&gt;
+                        &lt;input class=&quot;c-input&quot; type=&quot;number&quot; id=&quot;disabledFormPriceId&quot; value=&quot;1000&quot; /&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;c-input-group__append&quot;&gt;
+                        &lt;span&gt;€&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;o-form-group&quot;&gt;
+            &lt;label class=&quot;o-form-group__label&quot;&gt;Radio&lt;/label&gt;
+            &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                &lt;div class=&quot;c-radio-group c-radio-group--inline&quot;&gt;
+                    &lt;div class=&quot;c-radio&quot;&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;disabledFormRadio&quot; checked=&quot;checked&quot; /&gt;Option A
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;c-radio&quot;&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;disabledFormRadio&quot; /&gt;Option B
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;c-radio&quot;&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;disabledFormRadio&quot; /&gt;Option C
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;o-form-group&quot;&gt;
+            &lt;label class=&quot;o-form-group__label&quot;&gt;Checkbox&lt;/label&gt;
+            &lt;div class=&quot;o-form-group__controls&quot;&gt;
+                &lt;div class=&quot;c-checkbox-group c-checkbox-group--inline&quot;&gt;
+                    &lt;div class=&quot;c-checkbox&quot;&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;checkbox&quot; name=&quot;disabledFormCheckbox&quot; checked=&quot;checked&quot; /&gt;Value 1
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;c-checkbox&quot;&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;checkbox&quot; name=&quot;disabledFormCheckbox&quot; /&gt;Value 2
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;o-form-group&quot;&gt;
+            &lt;input class=&quot;c-button c-button--primary&quot; type=&quot;submit&quot; value=&quot;Save&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+                        </div>
+                        <div class="br-sample-code br-sample-code-pug">
+                            <button class="br-sample-copy-code-btn c-button c-button--secondary c-button--small">Copy to clipboard</button>
+                            <pre class="br-sample-markup br-sample-markup-pug">form.o-form-group-layout.o-form-group-layout--standard
+    fieldset(disabled)
+        +c-form-group({label: 'Name', id: 'disabledFormNameId'})
+            +c-input({id: 'disabledFormNameId', value: 'John Doe'})
+
+        +c-form-group({label: 'Email', id: 'disabledFormEmailId'})
+            +c-input({id: 'disabledFormEmailId', value: 'user@name.com'})
+
+        +c-form-group({label: 'Password', id: 'disabledFormPasswordId'})
+            .c-input-with-icon
+                +c-input({type: 'password', id: 'disabledFormPasswordId', value: 'password'})
+                button.c-input-with-icon__toggle(data-password-toggle)
+                    +icon('eye')
+                    +icon('eye-off')
+
+        +c-form-group({label: 'Preference', id: 'disabledFormPreferenceId', helperTooltip: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo accumsan risus.'})
+            +c-select({id: 'disabledFormPreferenceId', value: ['Option A', 'Option B', 'Option C']})
+
+        +c-form-group({label: 'Price', id: 'disabledFormTextareaId'})
+             +c-textarea({id: 'textarea'})
+
+        +c-form-group({label: 'Price', id: 'disabledFormPriceId'})
+            +c-input-group-after({id: 'disabledFormPriceId', type: 'number', text: '€', value: 1000})
+
+        +c-form-group({label: 'Radio'})
+            +c-radio-group({name: 'disabledFormRadio', value: ['Option A', 'Option B', 'Option C'], isInline: true, checked: 'Option A'})
+
+        +c-form-group({label: 'Checkbox'})
+            +c-checkbox-group({name: 'disabledFormCheckbox', value: ['Value 1', 'Value 2'], isInline: true, checked: 'Value 1'})
+
+        .o-form-group
+            input.c-button.c-button--primary(type=&quot;submit&quot; value=&quot;Save&quot;)
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="o-container-vertical">
+            <div class="o-container">
+                <hr class="c-hr">
+                <ul class="c-bordered-list-horizontal c-bordered-list-horizontal--muted">
+                    <li>
+                        <a href="https://github.com/smartcoop/design">
+                            <div class="o-flex">
+                                <div class="u-spacer-right-s">
+                                    <div class="o-svg-icon o-svg-icon-github  ">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" fill="#595959" />
+                                        </svg>
+                                    </div>
+                                </div>Share feedback on GitHub
+                            </div>
+                            <!--li: a(href="#") Licensing information
+                -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>

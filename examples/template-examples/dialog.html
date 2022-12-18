@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="u-maximize-height" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Dashboard - Smart Design System
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prototype.css">
+    <link rel="stylesheet" href="/css/styleguide-customizations.css">
+    <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="u-maximize-height">
+    <div class="u-spacer">
+        <button class="c-button c-button--secondary" data-dialog="dialogId">Use me to trigger a modal...</button>
+        <button class="c-button c-button--secondary" data-dialog="dialogId2">Use me to trigger another modal...</button>
+        <button class="c-button c-button--secondary" data-dialog="dialogId3">Use me to trigger another modal...</button>
+    </div>
+    <div class="c-dialog-backdrop"></div>
+    <div class="c-dialog-context o-flex--center" id="dialogId3">
+        <div class="c-dialog c-dialog--small" role="dialog" aria-labelledby="dialogTitle-03">
+            <div class="c-dialog__push"></div>
+            <div class="c-dialog__body">
+                <div class="u-spacer">
+                    <h3 class="c-h3">A title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="c-dialog__footer c-dialog__footer--bordered">
+                <div class="c-toolbar c-toolbar--spaced">
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <div class="c-button-toolbar">
+                                <button class="c-button c-button--secondary" data-dialog-close>
+                                    <div class="c-button__content">
+                                        <div class="c-button__label">Cancel</div>
+                                    </div>
+                                </button>
+                                <button class="c-button c-button--primary" data-dialog-close>
+                                    <div class="c-button__content">
+                                        <div class="c-button__label">Save</div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-dialog__push"></div>
+        </div>
+    </div>
+    <div class="c-dialog-context o-flex--center" id="dialogId">
+        <div class="c-dialog c-dialog--large" role="dialog" aria-labelledby="dialogTitle-02">
+            <div class="c-dialog__push"></div>
+            <div class="c-dialog__header c-dialog__header--bordered">
+                <div class="c-toolbar c-toolbar--spaced">
+                    <div class="c-toolbar__left">
+                        <div class="c-toolbar__item">
+                            <h2 class="c-dialog__title" id="dialogTitle-02">Title</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-dialog__body">
+                <div class="u-spacer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="c-dialog__footer c-dialog__footer--bordered">
+                <div class="c-toolbar c-toolbar--spaced">
+                    <div class="c-toolbar__right">
+                        <div class="c-toolbar__item">
+                            <div class="c-button-toolbar">
+                                <button class="c-button c-button--secondary" data-dialog-close>
+                                    <div class="c-button__content">
+                                        <div class="c-button__label">Cancel</div>
+                                    </div>
+                                </button>
+                                <button class="c-button c-button--primary" data-dialog-close>
+                                    <div class="c-button__content">
+                                        <div class="c-button__label">Save</div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-dialog__push"></div>
+        </div>
+        <div class="c-dialog-context o-flex--center" id="dialogId2">
+            <div class="c-dialog c-dialog--medium" role="dialog" aria-labelledby="dialogTitle-01">
+                <div class="c-dialog__push"></div>
+                <div class="c-dialog__header c-dialog__header--bordered">
+                    <div class="c-toolbar c-toolbar--spaced">
+                        <div class="c-toolbar__left">
+                            <div class="c-toolbar__item">
+                                <h2 class="c-dialog__title" id="dialogTitle-01">Title 2 (Medium size)</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-dialog__body">
+                    <div class="u-spacer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="c-dialog__footer c-dialog__footer--bordered">
+                    <div class="c-toolbar c-toolbar--spaced">
+                        <div class="c-toolbar__right">
+                            <div class="c-toolbar__item">
+                                <div class="c-button-toolbar">
+                                    <button class="c-button c-button--secondary" data-dialog-close>
+                                        <div class="c-button__content">
+                                            <div class="c-button__label">Cancel</div>
+                                        </div>
+                                    </button>
+                                    <button class="c-button c-button--primary" data-dialog-close>
+                                        <div class="c-button__content">
+                                            <div class="c-button__label">Save</div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-dialog__push"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/bundle-prototype.js"></script>
+    <script src="/js/bundle-client.js"></script>
+</body>
+
+</html>
