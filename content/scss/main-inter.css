@@ -1,18 +1,18 @@
 /* ==========================================================================
-  This is a copy of main.scss with some changes. The first change is using IBM
-  Plex as font.
-  See the originale main.scss file (main-inter.scss) for additional comments.
+  Stylesheet for Smart
+  ITCSS + BEM
+  ---
+  This SCSS code is inspired by BEM (Block Element Modifier) and ITCSS (Inverted Triangle CSS) methodologies.
+  For BEM Please refer to http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+  For ITCSS Please refer to https://speakerdeck.com/dafed/managing-css-projects-with-itcss
    ========================================================================== */
 
 /* Settings: preprocessor variables, colors, global settings
    ========================================================================== */
-@import "_s-colors";
-@import "_s-fonts-ibm-plex";
-@import "_s-variables";
 
-/* Those are defined in _s-variables above. */
-$g-base-font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-$g-headings-font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+@import "_s-colors";
+@import "_s-fonts";
+@import "_s-variables";
 
 /* Generic: CSS reset, box-sizing, global CSS tweaks
    ========================================================================== */
