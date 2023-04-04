@@ -1,8 +1,5 @@
 extends /templates/_layouts/master
 
-block append pageVariables
-    - var bodyClass = 'u-bg-gray-25'
-
 block body
 
     header.o-container-vertical
@@ -15,12 +12,12 @@ block body
                 .c-panel__body
 
                     form
-                        h3.c-h2 Sign in
+                        h3.c-h2 Log in to Appname
                         .o-form-group-layout.o-form-group-layout--standard
                             .o-form-group
-                                label.o-form-group__label Email
+                                label.o-form-group__label Username
                                 .o-form-group__controls
-                                    input.c-input(type="email")
+                                    input.c-input()
 
                             .o-form-group
                                 label.o-form-group__label(for="passwordId") Password
@@ -34,7 +31,7 @@ block body
                             .o-form-group
                                 a.c-button.c-button--primary.c-button--block(href="#")
                                     .c-button__content
-                                        .c-button__label Sign in
+                                        .c-button__label Log in
 
                             p.c-or
                                 span or
@@ -46,7 +43,7 @@ block body
                             .o-form-group.u-ta-center
 
             .c-content.u-text-center.u-spacer-top-l
-                a.u-text-muted(href="#") Forgot password
+                a(href="#") Reset password
 
     footer#footer
         .o-container-vertical

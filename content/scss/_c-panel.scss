@@ -8,16 +8,13 @@
 $c-panel-padding-all: 2.4rem !default;
 $c-panel-padding-horizontal: 2.4rem !default;
 $c-panel-padding-vertical: 2.4rem !default;
-$c-panel-border-color: $color-gray-150 !default;
-$c-panel-border-radius: 0.4rem !default;
+$c-panel-border-color: $color-black !default;
 
 /* Standard component construction
    ========================================================================== */
 
 .c-panel {
-  background-color: #FFF;
-  border-radius: $c-panel-border-radius;
-  border: 1px solid $c-panel-border-color;
+  border: 0.2rem solid $c-panel-border-color;
 }
 
 .c-panel__body {
