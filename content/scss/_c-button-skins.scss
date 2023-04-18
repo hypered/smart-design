@@ -54,7 +54,7 @@ $c-button-link-color: $color-red-600 !default;
    ========================================================================== */
 
 .c-button--secondary {
-  border: 1px solid $color-gray-500;
+  border: 2px solid $color-black;
   background: #fff;
   color: $color-semantic-body-text;
 
@@ -152,22 +152,30 @@ $c-button-link-color: $color-red-600 !default;
 /* Shared disabled state for primary and secondary buttons
    ========================================================================== */
 
-*[disabled] .c-button--primary,
 *[disabled] .c-button--secondary,
-.c-button--primary[disabled],
 .c-button--secondary[disabled],
-.c-button--primary:disabled,
 .c-button--secondary:disabled,
 .c-button--disabled {
-  background: $color-gray-100;
-  border-color: $color-gray-100;
+  border-color: $color-gray-500;
   color: $color-semantic-disabled;
   pointer-events: none;
 
   svg * {
     fill: $color-semantic-disabled;
   }
+}
 
+*[disabled] .c-button--primary,
+.c-button--primary[disabled],
+.c-button--primary:disabled {
+  border-color: $color-gray-500;
+    background: $color-gray-500;
+  color: $color-white;
+  pointer-events: none;
+
+  svg * {
+    fill: $color-semantic-disabled;
+  }
 }
 
 

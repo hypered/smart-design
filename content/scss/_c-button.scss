@@ -7,7 +7,7 @@ $c-button-border-radius: 0.3rem !default;
 
 // Sizes (heights)
 
-$c-button-height: 3.6rem !default;
+$c-button-height: 5.6rem !default;
 $c-button-height-small: 2.6rem !default;
 
 // Font size
@@ -22,7 +22,7 @@ $c-button-line-height-small: 1.8rem;
 
 // Horizontal padding (border included)
 
-$c-button-padding-horizontal: 1.6rem !default;
+$c-button-padding-horizontal: 3.2rem !default;
 $c-button-padding-horizontal-small: 1rem !default;
 
 // Spacing between icon and label
@@ -38,14 +38,12 @@ $c-button-icon-spacing-small: 0.4rem !default;
   text-decoration: none; // to reset <a> element
   cursor: pointer;
   vertical-align: middle;
-  border-radius: $c-button-border-radius;
-  padding: (($c-button-height - $c-button-line-height - 0.2rem) / 2)
+  padding: (($c-button-height - $c-button-line-height - 0.4rem) / 2)
     $c-button-padding-horizontal;
   font-size: $c-button-font-size;
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
   display: inline-flex;
 
   .o-svg-icon {
