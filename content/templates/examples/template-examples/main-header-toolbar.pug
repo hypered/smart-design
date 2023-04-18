@@ -1,0 +1,22 @@
+extends /templates/_layouts/default
+
+block append pageVariables
+    - var moduleTitle = "Main header + toolbar"
+
+block content
+    .c-navbar.c-navbar--bordered-bottom
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    a.c-button.c-button--icon.c-button--borderless(href="#")
+                        .c-button__content
+                            +icon('arrow-left')
+                            .u-sr-accessible Back
+                .c-toolbar__item
+                        h2.c-toolbar__title Toolbar title
+
+            .c-toolbar__right
+                .c-toolbar__item
+                    .c-button-toolbar
+                        +c-button({}) Cancel
+                        +c-button({skin: 'primary', icon: 'save'}) Save
