@@ -5,7 +5,7 @@
 .c-user-navigation {
   display: flex;
   align-items: center;
-  padding: .4rem 2.8rem .4rem 1.6rem;
+  padding: .4rem 1.6rem .4rem 2.8rem;
   color: $color-semantic-body-text;
   position: relative;
   appearance: none;
@@ -18,16 +18,16 @@
     margin-right: 0.4rem;
   }
 
-  &:after {
+  &:before {
     pointer-events: none;
     content: ' ';
     position: absolute;
-    right: 1.4rem;
+    left: 1.4rem;
     top: 1.8rem;
     width: 0;
     height: 0;
     border-width: 1rem;
-    border: 0.5rem solid $color-gray-500;
+    border: 0.5rem solid black;
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
