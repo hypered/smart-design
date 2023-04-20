@@ -78,11 +78,8 @@
 }
 
 .c-navbar--bordered-bottom {
-  border-bottom: 0.1rem solid $color-semantic-border;
-}
-
-.c-navbar--background {
-  background-color: #f4f4f4;
+  border-bottom: 0.2rem solid black;
+  border-style: none none dashed;
 }
 
 /* Sizes
