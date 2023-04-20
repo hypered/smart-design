@@ -24,7 +24,7 @@
 }
 
 .c-pill-navigation__item--has-child-menu > button {
-  padding: .8rem 2.8rem .8rem 1.6rem;
+  padding: .8rem 1.6rem .8rem 2.8rem;
   appearance: none;
   background: none;
   border: none;
@@ -32,16 +32,16 @@
   margin: 0;
   cursor: pointer;
   line-height: 1.5;
-  &:after {
+  &:before {
     pointer-events: none;
     content: ' ';
     position: absolute;
-    right: 1.4rem;
+    left: 1.4rem;
     top: 1.8rem;
     width: 0;
     height: 0;
     border-width: 1rem;
-    border: 0.5rem solid $color-gray-500;
+    border: 0.5rem solid black;
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
