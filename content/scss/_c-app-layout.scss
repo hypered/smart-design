@@ -26,12 +26,11 @@
 .c-app-layout-inner__sidebar {
   width: 100%;
   flex: 0 0 auto;
-  padding: 2.4rem;
+  padding: 0 2.4rem;
 
   @media (min-width: $g-bp2) {
     height: 100%;
     width: 32rem;
-    border-right: 0.1rem solid $color-semantic-border;
   }
 
   @media (max-width: ($g-bp2 - 1px)) {

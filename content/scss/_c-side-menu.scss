@@ -3,8 +3,8 @@
   ========================================================================== */
 
 .c-side-menu {
-  border: 0.1rem solid $color-semantic-border;
-  border-radius: 0.3rem;
+  background-color: #f4f4f4;
+  padding: 1.6rem;
 }
 
 .c-side-menu + .c-side-menu {
@@ -12,13 +12,13 @@
 }
 
 .c-side-menu__item + .c-side-menu__item {
-  border-top: 0.1rem solid $color-semantic-border;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
 }
 
 .c-side-menu__link {
   text-decoration: none;
   padding: 1.2rem 2.4rem;
-  color: $color-semantic-body-text;
+  color: black;
   align-items: center;
   display: flex;
   position: relative;
@@ -35,39 +35,14 @@
 
 .c-side-menu__item--active {
   > .c-side-menu__link {
-    background: #fff;
-    color: $color-gray-900;
+    background: #efefef;
+    color: black;
 
     &:before {
-      content: '';
-      height: calc(100% + 0.2rem);
-      width: 0.5rem;
+      content: '→';
       position: absolute;
-      left: -0.1rem;
-      top: -0.1rem;
-      bottom: -0.1rem;
-      background: $color-red-600;
+      left: 0.6rem;
+      top: 1.2rem;
     }
-  }
-}
-
-
-.c-side-menu__item:first-child {
-  .c-side-menu__link {
-    border-radius: 0.3rem 0.3rem 0 0;
-  }
-
-  &.c-side-menu__item--active .c-side-menu__link:before {
-      border-top-left-radius: 0.3rem;
-  }
-}
-
-.c-side-menu__item:last-child {
-  .c-side-menu__link {
-    border-radius: 0 0 0.3rem 0.3rem;
-  }
-
-  &.c-side-menu__item--active .c-side-menu__link:before {
-      border-bottom-left-radius: 0.3rem;
   }
 }
