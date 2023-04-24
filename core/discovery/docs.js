@@ -19,6 +19,8 @@ if (process.env.NODE_ENV == "production") {
 
 const locals = require('../templates/locals');
 
+const MultipleBaseDirs = require('../templates/multi-basedirs');
+
 module.exports = {
   discover: function () {
     const docFiles = glob.sync(paths.content.docs)
@@ -39,7 +41,8 @@ module.exports = {
           const markupWithLayout = `extends /../core/templates/layouts/sample\n\nblock content\n${indentedPugMarkup}`;
 
           const compiler = pug.compile(markupWithLayout, Object.assign({}, config.pug, {
-            filename: docPath
+            filename: docPath,
+            plugins: [MultipleBaseDirs()]
           }));
           parsedFile.body = compiler(Object.assign({}, locals.getDefaultLocals(), {
             pathname: `styleguide/docs/${filename}`

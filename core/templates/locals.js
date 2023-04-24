@@ -14,6 +14,8 @@ if (process.env.NODE_ENV == "production") {
 const paths = require('../paths');
 const beautify = require('js-beautify').html;
 
+const MultipleBaseDirs = require('../templates/multi-basedirs');
+
 function getDefaultLocals() {
   delete require.cache[require.resolve('../discovery/pages')];
   delete require.cache[require.resolve('../discovery/colors')];
@@ -59,7 +61,8 @@ function getDefaultLocals() {
       var a = pug.compile(markupWithLayout, {
         pretty: true,
         basedir: 'content',
-        filename: componentFileLocation
+        filename: componentFileLocation,
+        plugins: [MultipleBaseDirs()]
       })(locals);
 
       // Then beautify with JS beautify settings
