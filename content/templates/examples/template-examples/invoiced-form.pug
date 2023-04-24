@@ -5,33 +5,29 @@ block append pageVariables
     - var bodyClass="o-flex o-flex--vertical u-maximize-height"
 
 block body
-
     header#header
         .o-container
             include /templates/_includes/main-header--page
 
     main.o-container.o-container--flex
-
-        block content
-
-            .c-design-system-home-hero.u-padding-vertical-xl
-                .o-grid
-                    .o-grid-col-bp3-6
-                        .o-flex.o-flex.o-flex--vertical-center(style="height: 100%;")
-                            .c-display
-                                h1 Convert PDF invoices into structured data and QR codes
-                                p Upload your invoice using the form on this page and obtain structured data, accompanied by a QR code designed to initiate a SEPA transfer.
-                    .o-grid-col-bp3-6
-                        .c-panel.u-spacer-bottom
-                            .c-panel__body
-                                form(method="POST", enctype="multipart/form-data")
-                                    +c-form-group({label: '', id: 'pdf-invoice-form'})
-                                        .c-file-upload__simple
-                                            label(for="pdf-invoice-file")
-                                                span Select a PDF invoice:
-                                                input(type="file", id="pdf-invoice-file", name="pdf-invoice-file")
-                                        .u-spacer-bottom
-                                        button.c-button.c-button--primary(type="submit")
-                                            span.c-button__content
-                                                +icon('cloud-upload')
-                                                span.c-button__label Upload file
+        .c-design-system-home-hero.u-padding-vertical-xl
+            .o-grid
+                .o-grid-col-bp3-6
+                    .o-flex.o-flex.o-flex--vertical-center(style="height: 100%;")
+                        .c-display
+                            h1 Convert PDF invoices into structured data and QR codes
+                            p Upload your invoice using the form on this page and obtain structured data, accompanied by a QR code designed to initiate a SEPA transfer.
+                .o-grid-col-bp3-6
+                    .c-panel.u-spacer-bottom
+                        .c-panel__body
+                            form(method="POST", enctype="multipart/form-data")
+                                +c-form-group({label: '', id: 'pdf-invoice-form'})
+                                    .c-file-upload__simple
+                                        label(for="pdf-invoice-file")
+                                            span Select a PDF invoice:
+                                            input(type="file", id="pdf-invoice-file", name="pdf-invoice-file")
+                                    .u-spacer-bottom
+                                    button.c-button.c-button--primary(type="submit")
+                                        span.c-button__content
+                                            +icon('cloud-upload')
+                                            span.c-button__label Upload file
