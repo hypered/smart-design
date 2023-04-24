@@ -1,0 +1,102 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Home"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
+
+block body
+
+    header#header
+        .o-container
+            .c-navbar.c-navbar--bordered-bottom.c-navbar--main
+                .c-toolbar
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            +c-brand({size: "small"})
+
+                    .c-toolbar__right
+                        .c-toolbar__item
+
+
+                            // Nav for desktop
+                            nav.c-design-system-nav
+                                +c-button({ layout: 'icon-only', icon: 'menu', skin: 'borderless'})(id="c-design-system-nav-open" class="c-design-system-nav-open") Open menu
+                                +c-button({ layout: 'icon-only', icon: 'close', skin: 'borderless'})(id="c-design-system-nav-close" class="c-design-system-nav-close") Close menu
+
+                                .c-design-system-nav__mobile
+
+                                    ul
+                                        li
+                                            span Design
+                                            ul
+                                                li
+                                                    a(href="/design/how-it-works.html") Design workflow
+                                                li
+                                                    a(href="/design/in-practice/copywriting.html") Design system in practice
+                                        li
+                                            span Development
+                                            ul
+                                                li
+                                                    a(href="/development/getting-started.html") Getting started
+                                                li
+                                                    a(href="/development/package-and-repo-links.html") Package and repo links
+                                                li
+                                                    a(href="/development/browser-support.html") Browser support
+                                                li
+                                                    a(href="/development/writing-css/architecture.html") CSS architecture
+                                                li
+                                                    a(href="/development/writing-css/component-structure.html") CSS component structure
+                                        li
+                                            span Examples
+                                            ul
+                                                li
+                                                    a(href="/examples/templates.html") Example templates
+                                                li
+                                                    a(href="/prototypes/index.html") Prototypes
+                                                li
+                                                    a(href="/examples/design-tests.html") Tests
+
+                                        li
+                                            a(href="/development/component-documentation.html") Components
+                                        li
+                                            a(href="/blog/index.html") Blog
+                                        li
+                                            a(href="/changelog.html") Changelog
+
+                                .c-design-system-nav__desktop
+                                    ul.c-pill-navigation
+                                        li.c-pill-navigation__item
+                                            a(href="/changelog.html") Documentation
+                                        li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu
+                                            button(type="button" data-menu="menu2" data-menu-samewidth="true") Playground
+                                            ul.c-menu.c-menu--large#menu2
+                                                li.c-menu__item
+                                                    a.c-menu__label(href="/development/package-and-repo-links.html") Compute salaries
+                                                li.c-menu__item
+                                                    a.c-menu__label(href="/development/package-and-repo-links.html") Convert PDF invoices
+
+    main.o-container.o-container--flex
+
+        block content
+
+            .c-design-system-home-hero.u-padding-vertical-xl
+                .o-grid
+                    .o-grid-col-bp3-6
+                        .o-flex.o-flex.o-flex--vertical-center(style="height: 100%;")
+                            .c-display
+                                h1 Convert PDF invoices into structured data and QR codes
+                                p Upload your invoice using the form on this page and obtain structured data, accompanied by a QR code designed to initiate a SEPA transfer.
+                    .o-grid-col-bp3-6
+                        .c-panel.u-spacer-bottom
+                            .c-panel__body
+                                form(method="POST", enctype="multipart/form-data")
+                                    +c-form-group({label: '', id: 'pdf-invoice-form'})
+                                        .c-file-upload__simple
+                                            label(for="pdf-invoice-file")
+                                                span Select a PDF invoice:
+                                                input(type="file", id="pdf-invoice-file", name="pdf-invoice-file")
+                                        .u-spacer-bottom
+                                        button.c-button.c-button--primary(type="submit")
+                                            span.c-button__content
+                                                +icon('cloud-upload')
+                                                span.c-button__label Upload file
