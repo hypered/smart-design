@@ -1,9 +1,9 @@
-name: Deploy to reference.smartcoop.sh
+name: Deploy to mono.hypered.design
 
 on:
   push:
     branches:
-    - main
+    - main-xxxx
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
     - name: Build the static site
       run: npm run-script build
     - name: Re-establish the CNAME configuration
-      run: echo reference.smartcoop.sh > dist/CNAME
+      run: echo mono.hypered.design > dist/CNAME
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
