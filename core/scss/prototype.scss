@@ -113,62 +113,6 @@ html.br-styleguide,
   overflow: auto;
 }
 
-html.br-prototype-nav-is-open {
-  position: relative;
-}
-
-.br-prototype-nav {
-  background-color: #FFF;
-  line-height: 1.5;
-  z-index: 2000;
-  width: 250px;
-  overflow: hidden;
-  display: none;
-  flex-direction: column;
-  text-align: left;
-  height: 100%;
-  .br-prototype-nav-inner {
-    padding: 2rem*$br-rem-multiplier;
-    overflow: hidden;
-    overflow-y: auto;
-  }
-
-  &.br-prototype-nav-open {
-    display: flex;
-    box-shadow: 0.2rem*$br-rem-multiplier 0 0.5rem*$br-rem-multiplier rgba(#000, 0.3);
-  }
-}
-
-.br-prototype-nav-text {
-  font-size: 1.3rem*$br-rem-multiplier;
-  margin: 0;
-  padding: 0 0 0.6rem*$br-rem-multiplier;
-  color: rgba(#000,0.5);
-}
-
-/* Headings (both on index page and in sidebar)
-   ========================================================================== */
-
-.br-prototype-nav-main-heading {
-  color: #000;
-  font-weight: $br-heading-font-weight;
-  margin: 0;
-}
-
-/* Index page
-   ========================================================================== */
-
-.br-prototype-nav-index {
-  padding: 2rem*$br-rem-multiplier;
-}
-
-.br-prototype-nav-index-cols {
-  column-count: 3;
-  li {
-    break-inside: avoid;
-  }
-}
-
 /* Page states
    ========================================================================== */
 
@@ -203,67 +147,6 @@ html.br-prototype-nav-is-open {
   list-style: none;
   padding: 0;
 }
-
-.br-prototype-nav {
-
-  .br-bordered-list ul {
-    padding: 0 0 0 1.8rem*$br-rem-multiplier;
-    list-style: none;
-  }
-
-  .br-tree-dir {
-
-    .br-tree-dir-title {
-      margin: 0;
-      cursor: default;
-      font-weight: 400;
-
-      &:before {
-        content: '';
-        width: 0;
-        height: 0;
-        display: inline-block;
-        text-align: center;
-
-        // CSS triangle
-        border: 0;
-        border-left: 0.4rem*$br-rem-multiplier solid transparent;
-        border-right: 0.4rem*$br-rem-multiplier solid transparent;
-        border-top: 0.4rem*$br-rem-multiplier solid #999;
-
-        margin-left: 0.2rem*$br-rem-multiplier;
-        margin-right: 0.4rem*$br-rem-multiplier;
-
-        position: relative;
-        top: -0.3rem*$br-rem-multiplier;
-      }
-    }
-  }
-
-  .br-tree-dir--is-collapsed {
-    * {
-      display: none;
-    }
-
-    > .br-tree-dir-title {
-      display: block;
-
-      &:before {
-        // CSS triangle
-        border: 0;
-        border-top: 0.4rem*$br-rem-multiplier solid transparent;
-        border-bottom: 0.4rem*$br-rem-multiplier solid transparent;
-        border-left: 0.4rem*$br-rem-multiplier solid #999;
-
-        margin-left: 0.35rem*$br-rem-multiplier;
-        margin-right: 0.65rem*$br-rem-multiplier;
-        top: 0;
-      }
-    }
-  }
-
-}
-
 
 /* br-component
    ========================================================================== */
