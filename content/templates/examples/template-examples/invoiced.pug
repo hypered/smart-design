@@ -9,32 +9,27 @@ block content
         .c-toolbar
             .c-toolbar__left
                 .c-toolbar__item
-                    a.c-button.c-button--icon.c-button--borderless(href="#")
+                    a.c-button.c-button--icon.c-button--borderless(href="/examples/templates.html")
                         .c-button__content
                             +icon('arrow-left')
                             .u-sr-accessible Back
                 .c-toolbar__item
-                        h2.c-toolbar__title Toolbar title
+                        h2.c-toolbar__title Invoice data
 
-            .c-toolbar__right
-                .c-toolbar__item
-                    .c-button-toolbar
-                        +c-button({}) Cancel
-                        +c-button({skin: 'primary', icon: 'save'}) Save
     .c-app-layout-inner
         .c-app-layout-inner__sidebar
-            ul.c-side-menu
-                li.c-side-menu__item.c-side-menu__item--active
-                    a.c-side-menu__link(href="#") Quotes &amp; invoices
-                li.c-side-menu__item
-                    a.c-side-menu__link(href="#") Funding
-                li.c-side-menu__item
-                    a.c-side-menu__link(href="#") Expenses
+            img(src="/images/qrcode.png")
+            ul.c-bordered-list
+                li
+                    span Amount: 10,00EUR
+                li
+                    span IBAN: XX00 0000 0000 0000
+                li
+                    span Ref: +++000/0000/00000+++
 
         .c-app-layout-inner__content
             .u-scroll-wrapper
                 .u-scroll-wrapper-body
                     .o-container.o-container--large
-                        .o-container-vertical
                         object(data="/images/example-invoice.pdf", type="application/pdf", width="800em", height="500em")
                           p No browser support: <a href="/images/example-invoice.pdf">download the PDF</a>.
