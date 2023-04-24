@@ -7,7 +7,6 @@
 
 module.exports = {
   noIndex: false,
-  pageTree: false,
   styleguide: false,
   js: {
     minify: true

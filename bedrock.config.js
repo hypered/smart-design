@@ -5,7 +5,6 @@
 */
 
 module.exports = {
-  pageTree: false,
   js: {
     minify: false
   },

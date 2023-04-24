@@ -5,13 +5,6 @@ const defaultConfig = {
    */
   noIndex: true,
   /**
-   *  Page tree generation: existence of this section
-   *  determines whether the page tree gets generated
-   */
-  pageTree: {
-    layoutStyle: 'sidebar'
-  },
-  /**
    * CSS and JS minification
    * Adjust these values to set up your project for production or dev
    */
