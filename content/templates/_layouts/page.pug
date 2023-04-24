@@ -1,0 +1,26 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var moduleTitle = "Home"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
+
+block body
+    header#header
+        .o-container
+            include /templates/_includes/main-header--guide
+
+    main.o-container.o-container--flex
+        block content
+
+    footer#footer
+        .o-container-vertical
+            .o-container
+                hr.c-hr
+                ul.c-bordered-list-horizontal.c-bordered-list-horizontal--muted
+                     li: a(href="https://github.com/smartcoop/design")
+                         .o-flex
+                             .u-spacer-right-s
+                                 +icon('github')
+                             | Share feedback on GitHub
+                         //
+                              li: a(href="#") Licensing information
