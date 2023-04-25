@@ -3,7 +3,7 @@
 This repository is a playground to experiment with a design system for Hypered,
 based on the work done by Mono for Smart. There is already the beginning of a
 Hypered design system (e.g. at `hypered.design`), mainly based on Tachyons.
-Using this repository brings a BEM+ITCSS approach.
+Using this repository brings a BEM+ITCSS approach instead.
 
 This repository contains (contained) the design system website hosted at <a
 href="https://design.smart.coop/">design.smart.coop</a>. This site describes
@@ -18,6 +18,21 @@ This website uses Bedrock in the background, which is a static site generator
 specialized in showing design systems. For instructions, view the README <a
 href="https://github.com/usebedrock/bedrock">here</a>.
 
+Bedrock's source code is actually par of the repository. This is something that
+was planned to change (see
+[#320](https://github.com/usebedrock/bedrock/issues/320).
+
+This repository has the code changes proposed in some PRs to address that
+situation:
+
+- https://github.com/usebedrock/bedrock/pull/418
+- https://github.com/usebedrock/bedrock/pull/404
+- https://github.com/usebedrock/bedrock/pull/399
+- https://github.com/usebedrock/bedrock/pull/419
+
+That being said, Bedrock will probably not be a standalone tool (and its code
+remains part of the repository).
+
 ## Getting started
 
     git clone git@github.com:hypered/smart-design.git
@@ -25,32 +40,7 @@ href="https://github.com/usebedrock/bedrock">here</a>.
     cd design
     npm install
     npm start
-
-(Make sure you are using a recent version of Node.)
-
-
-## Using Docker
-
-Docker is not necessary to develop or build the design system but a
-`Dockerfile` is present in this repository for your convenience. It is also
-useful to document a somewhat reproducible build.
-
-The following commands show how to build a Docker image named `design` and
-serve the design system on port 5000:
-
-```
-$ docker build -t design -f Dockerfile .
-$ docker run -p 5000:80 design
-```
-
-With the development server, the browser will automatically refresh the current
-page whenever its source changes. The development server can be run on port
-3000 with the following commands:
-
-```
-$ ./init.sh     # This is running 'npm install', so can be done once.
-$ ./develop.sh  # This is running 'npm start'.
-```
+    core/cli/bedrock
 
 ## Using Nix
 
@@ -87,18 +77,3 @@ pandoc --standalone --template template.html display-test.md > output.html
 The resulting file should render in the browser exactly as the `c-display`
 [example
 page](https://design.smart.coop/development/design-tests/display-test.html).
-
-## Contributing
-
-You can contribute to this project in several ways.
-
-* Create a pull request, that improves the code
-    * Look at open issues for inspiration
-    * Discuss an open issue if you need more information to solve it
-* Create an issue that describes a comment you have, a problem or bug
-
-## License
-
-License to be determined, see https://github.com/smartcoop/design/issues/64
-
-This text to be updated when we have a licensing logic.
