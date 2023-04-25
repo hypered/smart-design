@@ -13,6 +13,7 @@ const moment = require('moment');
 const marked = require('marked');
 const del = require('del');
 const es = require('event-stream');
+const through = require('through2');
 
 let config;
 if (process.env.NODE_ENV == "production") {
@@ -35,6 +36,25 @@ function getDefaultLocals() {
   return defaultLocals;
 }
 
+/* Add the user-defined _mixins/all and the Bedrock-provided icons mixins.
+ * This is done using the sample.pug wrapper template, also used to render
+ * the components in the style guide (using the `renderCode` function).
+ */
+function addMixins() {
+  return through.obj(function (vinylFile, encoding, callback) {
+    var outFile = vinylFile.clone();
+
+    const indentedPugMarkup =
+      vinylFile.contents.toString().split('\n').map(line => `    ${line}`).join('\n');
+    const markupWithLayout =
+      `extends /core/templates/layouts/sample\n\nblock content\n${indentedPugMarkup}`;
+
+    outFile.contents = new Buffer.from(markupWithLayout);
+
+    callback(null, outFile);
+  });
+}
+
 module.exports = {
   clean(done) {
     del(['./dist/**.html', './dist/modules', './dist'+config.styleguide.url]).then(function () {
@@ -42,6 +62,28 @@ module.exports = {
     });
   },
   compile: {
+    partials(done) {
+      return gulp.src(paths.content.templates.allComponents)
+        .pipe(data(function (file) {
+          return Object.assign({}, getDefaultLocals(), {
+            filename: path.basename(file.path).replace('pug', 'html'),
+            pathname: file.path.replace(path.join(process.cwd(), paths.content.templates.path), '').replace('.pug', ''),
+          });
+        }))
+        .pipe(addMixins())
+        .pipe(gulpPug(config.pug))
+        .on('error', function (err) {
+          notifier.notify({
+            title: 'Pug error',
+            message: err.message
+          });
+          gutil.log(gutil.colors.red(err));
+          gutil.beep();
+          this.emit('end');
+        })
+        .pipe(prettify(config.prettify))
+        .pipe(gulp.dest(paths.dist.partials));
+    },
     styleguide(done) {
       const defaultLocals = getDefaultLocals();
 
