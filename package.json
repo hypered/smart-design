@@ -21,8 +21,11 @@
   },
   "homepage": "https://github.com/mono-company/bedrock#readme",
   "devDependencies": {
+  },
+  "dependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.5",
+    "@popperjs/core": "^2.9.2",
     "autoprefixer": "^9.8.6",
     "babelify": "^10.0.0",
     "browser-sync": "^2.26.14",
@@ -70,8 +73,5 @@
     "postcss-import": "^14.0.2",
     "pug": "^2.0.4",
     "run-sequence": "^2.2.1"
-  },
-  "dependencies": {
-    "@popperjs/core": "^2.9.2"
   }
 }
