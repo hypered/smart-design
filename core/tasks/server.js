@@ -22,8 +22,10 @@ const app = express();
 app.use(express.static(paths.compiled.path));
 app.set('view engine', 'pug');
 app.set('views', [
+  // Try to lookup templates first from the local content/ directory,
+  // then from Bedrock's core/ directory.
   path.join(process.cwd(), './content/templates'),
-  path.join(process.cwd(), './core/templates')
+  path.join(__dirname, '../templates')
 ]);
 
 function renderView(req, res, viewName, customLocals) {
@@ -52,8 +54,8 @@ function renderView(req, res, viewName, customLocals) {
 
 module.exports = function (done) {
   app.get(config.styleguide.url, function (req, res) {
-    renderView(req, res, 'styleguide/index', {
-      pathname: 'styleguide/index'
+    renderView(req, res, '_styleguide/index', {
+      pathname: '_styleguide/index'
     });
   });
 
@@ -61,8 +63,8 @@ module.exports = function (done) {
     const docFilename = req.params.doc.replace('.html', '');
     const doc = _.find(docs.discover().allDocs, doc => doc.attributes.filename === docFilename);
 
-    renderView(req, res, 'styleguide/doc', {
-      pathname: path.join('styleguide/docs/', docFilename),
+    renderView(req, res, '_styleguide/doc', {
+      pathname: path.join('_styleguide/docs/', docFilename),
       doc
     });
   });
@@ -71,7 +73,7 @@ module.exports = function (done) {
     const componentGroups = components.discover();
     const componentGroup = req.params.group.replace('.html', '');
 
-    renderView(req, res, 'styleguide/component-group', {
+    renderView(req, res, '_styleguide/component-group', {
       pathname: req.path.replace('/', '').replace('.html', ''),
       componentGroup: componentGroups.byGroup[componentGroup]
     });
