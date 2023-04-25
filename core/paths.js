@@ -11,6 +11,7 @@ if (process.env.NODE_ENV == "production") {
 
 const contentPath = 'content/';
 const corePath = 'core/';
+const absoluteCorePath = __dirname;
 const compiledPath = 'tmp/';
 const distPath = 'dist/';
 
@@ -65,19 +66,19 @@ module.exports = {
   core: {
     path: corePath,
     js: {
-      entryFile: path.join(corePath, 'js/index.js'),
-      allFiles: path.join(corePath, 'js/**/*.js')
+      entryFile: path.join(absoluteCorePath, 'js/index.js'),
+      allFiles: path.join(absoluteCorePath, 'js/**/*.js')
     },
     scss: {
       all: path.join(corePath, 'scss/**/*.scss'),
-      prototype: path.join(corePath, 'scss/prototype.scss')
+      prototype: path.join(absoluteCorePath, 'scss/prototype.scss')
     },
     templates: {
       styleguide: {
-        index: path.join(corePath, 'templates/styleguide/index.pug'),
-        doc: path.join(corePath, 'templates/styleguide/doc.pug'),
-        colors: path.join(corePath, 'templates/styleguide/colors.pug'),
-        componentGroup: path.join(corePath, 'templates/styleguide/component-group.pug')
+        index: path.join(absoluteCorePath, 'templates/styleguide/index.pug'),
+        doc: path.join(absoluteCorePath, 'templates/styleguide/doc.pug'),
+        colors: path.join(absoluteCorePath, 'templates/styleguide/colors.pug'),
+        componentGroup: path.join(absoluteCorePath, 'templates/styleguide/component-group.pug')
       }
     }
   },
