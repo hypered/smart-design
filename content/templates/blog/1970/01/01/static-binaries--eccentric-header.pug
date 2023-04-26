@@ -1,9 +1,9 @@
-extends /templates/_layouts/page
+extends /templates/_layouts/page--eccentric
 
 block append pageVariables
     - var moduleTitle = "Static binaries"
     - var bodyClass="o-flex o-flex--vertical u-maximize-height"
 
 block content
-    .o-container.o-container--medium
+    .o-container.o-container--medium.o-container--eccentric
         include /templates/_includes/static-binaries

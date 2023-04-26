@@ -4,21 +4,21 @@ block append pageVariables
     - var htmlClass = 'br-styleguide br-styleguide-default-styles-active'
 
 block content
+    .o-container.o-container--flex
+        .u-padding-bottom-l
+            h1.c-d-h2 Component documentation
 
-    .u-padding-bottom-l
-        h1.c-d-h2 Component documentation
+        .o-grid
 
-    .o-grid
-    
-        .o-grid-col-bp3-3
-            if config.styleguide.search
-                .u-spacer-bottom-l
-                    .c-input-with-icon
-                        +icon('search')
-                        input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
+            .o-grid-col-bp3-3
+                if config.styleguide.search
+                    .u-spacer-bottom-l
+                        .c-input-with-icon
+                            +icon('search')
+                            input#styleguideSearch(type="search" placeholder=styleguideSearchPlaceholderString class=styleguideInputClass)
 
-            block nav
-                include ../includes/styleguide-nav
+                block nav
+                    include ../includes/styleguide-nav
 
-        .o-grid-col-bp3-9
-            block subContent
+            .o-grid-col-bp3-9
+                block subContent
