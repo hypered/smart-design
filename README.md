@@ -9,7 +9,7 @@ This repository contains (contained) the design system website hosted at <a
 href="https://design.smart.coop/">design.smart.coop</a>. This site describes
 how to contribute to the design system from a design and development
 perspective. A big part of the site is <a
-href="https://design.smart.coop/development/component-documentation.html">the
+href="https://design.smart.coop/components/index.html">the
 component documentation</a> where you can find copy/pastable HTML and CSS for
 common components. The Figma design files can be found on our [Figma community
 profile](https://www.figma.com/@smartcoop).

@@ -14,7 +14,7 @@ module.exports = {
     purge: false
   },
   styleguide: {
-    url: '/development/docs',
+    url: '/components',
     overrideStyleguideTemplates: false,
     search: true,
     colors: './content/scss/_s-colors.scss',

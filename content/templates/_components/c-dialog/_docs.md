@@ -26,4 +26,4 @@ You can add the data-dialog-close attribute to any child of the dialog. Clicking
 
 ### Related components
 
-Also see: <a href="/development/docs/c-alert-dialog.html">AlertDialog</a>.
+Also see: <a href="/components/c-alert-dialog.html">AlertDialog</a>.

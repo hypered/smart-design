@@ -59,6 +59,12 @@ module.exports = function (done) {
     });
   });
 
+  app.get(config.styleguide.url+'/index.html', function (req, res) {
+    renderView(req, res, 'components/index', {
+      pathname: req.path.replace('/', '').replace('.html', '')
+    });
+  });
+
   app.get(config.styleguide.url+'/docs/:doc', function (req, res) {
     const docFilename = req.params.doc.replace('.html', '');
     const doc = _.find(docs.discover().allDocs, doc => doc.attributes.filename === docFilename);

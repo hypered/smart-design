@@ -1,7 +1,8 @@
-extends ../index
+extends /templates/_layouts/page
 
 block append pageVariables
     - var moduleTitle = "Component documentation"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
     -
         var obj = [
             {
@@ -98,7 +99,7 @@ block content
                                                     each group in category
                                                         - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
                                                         li(class=styleguideNavListItemClass+' '+`${ "styleguide/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
-                                                            a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
+                                                            a(href=`/components/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
                                                                 |  #{groupName}
 
                 .br-styleguide-nav-holder.br-styleguide-nav-holder--desktop(class=styleguideNavigationHolderClass)
@@ -115,7 +116,7 @@ block content
                                             each group in category
                                                 - var groupName = group.docs ? group.docs.attributes.title || group.group.id : group.group.id
                                                 li(class=styleguideNavListItemClass+' '+`${ "styleguide/" + group.group.id == pathname ? styleguideNavListItemActiveClass : "" }`)
-                                                    a(href=`/development/docs/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
+                                                    a(href=`/components/${group.group.id}.html` class=styleguideNavListItemLinkClass+' '+`${ ("styleguide/" + group.group.id) == pathname ? styleguideNavListItemLinkActiveClass : "" }`)
                                                         |  #{groupName}
 
             .o-grid-col-bp3-9
@@ -125,6 +126,6 @@ block content
                     ul.o-card-grid#component-docs
                         each item in obj
                             li
-                                a.c-card(href="/development/docs/c-"+item.ref+".html")
+                                a.c-card(href="/components/c-"+item.ref+".html")
                                     img(src="/images/component-illustrations/"+item.ref+".png" alt="")
                                     span #{item.name}
