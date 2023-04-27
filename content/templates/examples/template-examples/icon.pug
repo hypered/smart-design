@@ -1,0 +1,107 @@
+extends /templates/_layouts/app
+
+block append pageVariables
+    - var moduleTitle = "Main header + toolbar"
+    - var fullScroll = true
+
+block content
+    .c-navbar.c-navbar--bordered-bottom
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    a.c-button.c-button--icon.c-button--borderless(href="#")
+                        .c-button__content
+                            +icon('arrow-left')
+                            .u-sr-accessible Back
+                .c-toolbar__item
+                        h2.c-toolbar__title Toolbar title
+
+            .c-toolbar__right
+                .c-toolbar__item
+                    .c-button-toolbar
+                        +c-button({}) Cancel
+                        +c-button({skin: 'primary', icon: 'save'}) Save
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar
+            ul.c-side-menu
+                li.c-side-menu__item.c-side-menu__item--active
+                    a.c-side-menu__link(href="#") Quotes &amp; invoices
+                li.c-side-menu__item
+                    a.c-side-menu__link(href="#") Funding
+                li.c-side-menu__item
+                    a.c-side-menu__link(href="#") Expenses
+
+        .c-app-layout-inner__content
+            .u-scroll-wrapper
+                .u-scroll-wrapper-body
+                    .o-container.o-container--large
+                        .o-container-vertical
+                            style.
+                              svg {
+                                width: 24px;
+                                height: 24px;
+                              }
+                              .magnified {
+                                width: 48px;
+                                height: 48px;
+                              }
+                              .even-bigger {
+                                width: 362px;
+                                height: 362px;
+                              }
+                              .grid {
+                                stroke: lightgrey;
+                                stroke-width: 0.1;
+                              }
+                              .center-lines {
+                                stroke: lightblue;
+                                stroke-width: 0.2;
+                              }
+                            label(for="strokeSize") Stroke size:
+                            input(type="range", id="strokeSize", name="strokeSize", min="1", max="6", value="2")
+                            label(for="lineCap") Line cap:
+                            select(id="lineCap", name="lineCap")
+                              option(value="round") Round
+                              option(value="butt") Butt
+                              option(value="square") Square
+                            label(for="lineJoin") Line join:
+                            select(id="lineJoin", name="lineJoin")
+                              option(value="round") Round
+                              option(value="bevel") Bevel
+                              option(value="miter") Miter
+                            br
+                            br
+                            svg(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 24 24")
+                              defs
+                                path#arrowDef(d="M4 12h15M12 4l8 8-8 8", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round", fill="none")
+                              use(href="#arrowDef")
+                            svg(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 24 24", class="magnified")
+                              use(href="#arrowDef")
+                            svg(xmlns="http://www.w3.org/2000/svg", viewBox="-0.1 -0.1 24.2 24.2", class="even-bigger")
+                              g(class="grid")
+                                each x in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+                                  line(x1=x, y1=0, x2=x, y2=24)
+                                  line(x1=0, y1=x, x2=24, y2=x)
+                              g(class="center-lines")
+                                line(x1=12, y1=0, x2=12, y2=24)
+                                line(x1=0, y1=12, x2=24, y2=12)
+                              use(href="#arrowDef")
+                            script.
+                              const arrowDef = document.getElementById('arrowDef');
+                              const strokeSizeInput = document.getElementById('strokeSize');
+                              strokeSizeInput.addEventListener('input', (event) => {
+                                const strokeWidth = event.target.value;
+                                arrowDef.setAttribute('stroke-width', strokeWidth / 2.0);
+                              });
+
+                              const lineCapInput = document.getElementById('lineCap');
+                              lineCapInput.addEventListener('change', (event) => {
+                                const lineCap = event.target.value;
+                                arrowDef.setAttribute('stroke-linecap', lineCap);
+                              });
+
+                              const lineJoinInput = document.getElementById('lineJoin');
+                              lineJoinInput.addEventListener('change', (event) => {
+                                const lineJoin = event.target.value;
+                                arrowDef.setAttribute('stroke-linejoin', lineJoin);
+                              });
