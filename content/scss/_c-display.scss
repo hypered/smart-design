@@ -2,12 +2,12 @@
   c-display
   ---
   Usage: wrap a .c-display class around content to turn it into rich text.
-  Similar to .c-content, but meant for a reading context.
+  Similar to .c-text, but meant for a reading context.
 
    ========================================================================== */
 
 .c-display {
-  font-size: 1.6rem; // Redefine base font size (in .c-content it derives from the body element)
+  font-size: 1.6rem; // Redefine base font size (in .c-text it derives from the body element)
   line-height: 1.5;  // Redefine base line height, so elements like p and li can derive it.
 }
 

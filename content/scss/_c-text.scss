@@ -1,7 +1,7 @@
 /* ==========================================================================
-  c-content
+  c-text
   ---
-  Usage: wrap a .c-content class around content to turn it into rich text.
+  Usage: wrap a .c-text class around content to turn it into rich text.
 
   .c-h1, .c-h2, .c-body-1, c-body 2
   ---
@@ -9,14 +9,14 @@
    ========================================================================== */
 
 .c-h1, .c-h2, .c-h3, .c-h4,
-.c-content h1,
-.c-content h2,
-.c-content h3,
-.c-content h4 {
+.c-text h1,
+.c-text h2,
+.c-text h3,
+.c-text h4 {
   color: $g-headings-color;
 }
 
-.c-h1, .c-content h1 {
+.c-h1, .c-text h1 {
   font-family: $g-headings-font-family;
   font-weight: 600;
   font-size: 2.4rem;
@@ -24,7 +24,7 @@
   line-height: 1.25;
 }
 
-.c-h2, .c-content h2 {
+.c-h2, .c-text h2 {
   font-family: $g-headings-font-family;
   font-weight: 600;
   font-size: 2.2rem;
@@ -32,7 +32,7 @@
   line-height: 1.3;
 }
 
-.c-h3, .c-content h3 {
+.c-h3, .c-text h3 {
   font-family: $g-headings-font-family;
   font-weight: 600;
   font-size: 2rem;
@@ -40,7 +40,7 @@
   line-height: 1.4;
 }
 
-.c-h4, .c-content h4 {
+.c-h4, .c-text h4 {
   font-family: $g-base-font-family;
   font-size: 1.8rem;
   font-weight: 600;
@@ -52,7 +52,7 @@
   margin: 1.5rem 0;
 }
 
-.c-body-2, .c-content p small {
+.c-body-2, .c-text p small {
   font-size: 1.4rem;
   margin: 1.4rem 0;
 }
@@ -63,7 +63,7 @@
 }
 
 .c-link,
-.c-content a:not(.c-button) {
+.c-text a:not(.c-button) {
   text-decoration: none;
   border-bottom: .1rem solid rgba($color-blue-600,.33);
 
@@ -73,7 +73,7 @@
   }
 }
 
-.c-content {
+.c-text {
 
   p {
     margin: 1.5rem 0;
