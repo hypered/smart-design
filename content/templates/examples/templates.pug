@@ -5,65 +5,66 @@ block append pageVariables
 
 block content
 
-    .o-container-vertical
-        h1.c-d-h1 Templates
+    .o-container.o-container--flex
+        .o-container-vertical
+            h1.c-d-h1 Templates
 
-        .o-grid
-            .o-grid-col-bp3-3
-                .u-spacer-bottom
-                    .u-spacer-right-bp3
-                        ul.c-side-menu
-                            li.c-side-menu__item(class=pathname.match(/examples\/templates/) ? "c-side-menu__item--active" : "")
-                                a.c-side-menu__link(href="/examples/templates.html") Example templates
-                            li.c-side-menu__item(class=pathname.match(/prototypes\/index/) ? "c-side-menu__item--active" : "")
-                                a.c-side-menu__link(href="/prototypes/index.html") Prototypes
-                            li.c-side-menu__item(class=pathname.match(/examples\/design-tests/) ? "c-side-menu__item--active" : "")
-                                a.c-side-menu__link(href="/examples/design-tests.html") Design tests
+            .o-grid
+                .o-grid-col-bp3-3
+                    .u-spacer-bottom
+                        .u-spacer-right-bp3
+                            ul.c-side-menu
+                                li.c-side-menu__item(class=pathname.match(/examples\/templates/) ? "c-side-menu__item--active" : "")
+                                    a.c-side-menu__link(href="/examples/templates.html") Example templates
+                                li.c-side-menu__item(class=pathname.match(/prototypes\/index/) ? "c-side-menu__item--active" : "")
+                                    a.c-side-menu__link(href="/prototypes/index.html") Prototypes
+                                li.c-side-menu__item(class=pathname.match(/examples\/design-tests/) ? "c-side-menu__item--active" : "")
+                                    a.c-side-menu__link(href="/examples/design-tests.html") Design tests
 
-            .o-grid-col-bp3-9
-                block subContent
-                    .c-display
+                .o-grid-col-bp3-9
+                    block subContent
+                        .c-display
 
-                        h2 Example templates
+                            h2 Example templates
 
-                        p You can reference the following example templates to see how to use the components in practice.
+                            p You can reference the following example templates to see how to use the components in practice.
 
-                        ul
-                            li: a(href="/examples/template-examples/sign-in-form.html") Sign in form
-                            li: a(href="/examples/template-examples/register-form.html") Register form
-                            li: a(href="/examples/template-examples/contact-form.html") Contact form
-                            li: a(href="/examples/template-examples/horizontal-form.html") Horizontal form
-                            li: a(href="/examples/template-examples/app-datagrid.html") Application index page with datagrid
-                            li: a(href="/examples/template-examples/app-form.html") Application form
-                            li: a(href="/examples/template-examples/app-form-alt-scroll.html") Application form, alt scroll
-                            li: a(href="/examples/template-examples/wizard.html") Application form with wizard
-                            li: a(href="/examples/template-examples/global-banner.html") Application form with global banner
-                            li: a(href="/examples/template-examples/app-side-menu.html") Application form with side menu
-                            li: a(href="/examples/template-examples/dialog.html") Dialog example
-                            li: a(href="/examples/template-examples/404.html") Application 404 error
-                            li: a(href="/examples/template-examples/invoiced-form.html") Invoiced form
-                            li: a(href="/examples/template-examples/invoiced.html") Invoiced result
-                            li: a(href="/examples/template-examples/image.html") Image page
+                            ul
+                                li: a(href="/examples/template-examples/sign-in-form.html") Sign in form
+                                li: a(href="/examples/template-examples/register-form.html") Register form
+                                li: a(href="/examples/template-examples/contact-form.html") Contact form
+                                li: a(href="/examples/template-examples/horizontal-form.html") Horizontal form
+                                li: a(href="/examples/template-examples/app-datagrid.html") Application index page with datagrid
+                                li: a(href="/examples/template-examples/app-form.html") Application form
+                                li: a(href="/examples/template-examples/app-form-alt-scroll.html") Application form, alt scroll
+                                li: a(href="/examples/template-examples/wizard.html") Application form with wizard
+                                li: a(href="/examples/template-examples/global-banner.html") Application form with global banner
+                                li: a(href="/examples/template-examples/app-side-menu.html") Application form with side menu
+                                li: a(href="/examples/template-examples/dialog.html") Dialog example
+                                li: a(href="/examples/template-examples/404.html") Application 404 error
+                                li: a(href="/examples/template-examples/invoiced-form.html") Invoiced form
+                                li: a(href="/examples/template-examples/invoiced.html") Invoiced result
+                                li: a(href="/examples/template-examples/image.html") Image page
 
-                        h2 Technical examples
+                            h2 Technical examples
 
-                        p The following examples show parts of pages to help development. In particular they extend <code>app</code>.
+                            p The following examples show parts of pages to help development. In particular they extend <code>app</code>.
 
-                        ul
-                            li: a(href="/examples/template-examples/main-header.html") Main header
-                            li: a(href="/examples/template-examples/main-header-sidebar.html") Main header + sidebar
-                            li: a(href="/examples/template-examples/main-header-toolbar.html") Main header + toolbar
-                            li: a(href="/examples/template-examples/main-header-sidebar-toolbar.html") Main header + sidebar + toolbar
+                            ul
+                                li: a(href="/examples/template-examples/main-header.html") Main header
+                                li: a(href="/examples/template-examples/main-header-sidebar.html") Main header + sidebar
+                                li: a(href="/examples/template-examples/main-header-toolbar.html") Main header + toolbar
+                                li: a(href="/examples/template-examples/main-header-sidebar-toolbar.html") Main header + sidebar + toolbar
 
-                        p Similarly, this time they extend <code>page</code> (or recreate something similar).
+                            p Similarly, this time they extend <code>page</code> (or recreate something similar).
 
-                        ul
-                            li: a(href="/examples/template-examples/main-header--page.html") Main header (page)
+                            ul
+                                li: a(href="/examples/template-examples/main-header--page.html") Main header (page)
 
-                        p Blog post example.
+                            p Blog post example.
 
-                        ul
-                            li: a(href="/blog/1970/01/01/static-binaries.html") Centered
-                            li: a(href="/blog/1970/01/01/static-binaries--eccentric.html") Eccentric
-                            li: a(href="/blog/1970/01/01/static-binaries--eccentric-header.html") Eccentric (header too)
-                            li: a(href="/blog/1970/01/01/static-binaries--left.html") Left-aligned
+                            ul
+                                li: a(href="/blog/1970/01/01/static-binaries.html") Centered
+                                li: a(href="/blog/1970/01/01/static-binaries--eccentric.html") Eccentric
+                                li: a(href="/blog/1970/01/01/static-binaries--eccentric-header.html") Eccentric (header too)
+                                li: a(href="/blog/1970/01/01/static-binaries--left.html") Left-aligned
