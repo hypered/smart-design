@@ -74,6 +74,6 @@ Markdown can be converted to HTML using something like:
 pandoc --standalone --template template.html display-test.md > output.html
 ```
 
-The resulting file should render in the browser exactly as the `c-display`
+The resulting file should render in the browser exactly as the `c-content`
 [example
 page](https://design.smart.coop/development/design-tests/display-test.html).

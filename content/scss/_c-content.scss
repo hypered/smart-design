@@ -1,53 +1,53 @@
 /* ==========================================================================
-  c-display
+  c-content
   ---
-  Usage: wrap a .c-display class around content to turn it into rich text.
+  Usage: wrap a .c-content class around content to turn it into rich text.
   Similar to .c-text, but meant for a reading context.
 
    ========================================================================== */
 
-.c-display {
+.c-content {
   font-size: 1.6rem; // Redefine base font size (in .c-text it derives from the body element)
   line-height: 1.5;  // Redefine base line height, so elements like p and li can derive it.
 }
 
 .c-d-h1, .c-d-h2, .c-d-h3, .c-d-h4,
-.c-display h1,
-.c-display h2,
-.c-display h3,
-.c-display h4 {
+.c-content h1,
+.c-content h2,
+.c-content h3,
+.c-content h4 {
   color: $g-headings-color;
 }
 
-.c-d-h1, .c-display h1,
-.c-d-h2, .c-display h2,
-.c-d-h3, .c-display h3,
-.c-d-h4, .c-display h4 {
+.c-d-h1, .c-content h1,
+.c-d-h2, .c-content h2,
+.c-d-h3, .c-content h3,
+.c-d-h4, .c-content h4 {
   font-family: $g-headings-font-family;
 }
 
-.c-d-h1, .c-display h1 {
+.c-d-h1, .c-content h1 {
   font-size: 3.8rem;
   margin: 4.8rem 0 3.2rem;
   line-height: 1.25;
   font-weight: 700;
 }
 
-.c-d-h2, .c-display h2 {
+.c-d-h2, .c-content h2 {
   font-size: 3rem;
   margin: 4.8rem 0 2.4rem;
   line-height: 1.36;
   font-weight: 600;
 }
 
-.c-d-h3, .c-display h3 {
+.c-d-h3, .c-content h3 {
   font-size: 2.6rem;
   margin: 3.2rem 0 1.8rem;
   line-height: 1.36;
   font-weight: 600;
 }
 
-.c-d-h4, .c-display h4 {
+.c-d-h4, .c-content h4 {
   font-size: 2.2rem;
   margin: 2.4rem 0 1.6rem;
   line-height: 1.36;
@@ -58,10 +58,10 @@
 .c-d-h2:first-child,
 .c-d-h3:first-child,
 .c-d-h4:first-child,
-.c-display h1:first-child,
-.c-display h2:first-child,
-.c-display h3:first-child,
-.c-display h4:first-child {
+.c-content h1:first-child,
+.c-content h2:first-child,
+.c-content h3:first-child,
+.c-content h4:first-child {
   margin-top: 0;
 }
 
@@ -76,7 +76,7 @@
   line-height: 1.72;
 }
 
-.c-display {
+.c-content {
 
   p {
     margin: 1.8rem 0;
