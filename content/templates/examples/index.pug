@@ -1,10 +1,10 @@
-extends ../index
+extends /templates/_layouts/page
 
 block append pageVariables
     - var moduleTitle = "Templates"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
 
 block content
-
     .o-container.o-container--flex
         .o-container-vertical
             h1.c-d-h1 Templates
@@ -15,17 +15,19 @@ block content
                         .u-spacer-right-bp3
                             ul.c-side-menu
                                 li.c-side-menu__item(class=pathname.match(/examples\/templates/) ? "c-side-menu__item--active" : "")
-                                    a.c-side-menu__link(href="/examples/templates.html") Example templates
+                                    a.c-side-menu__link(href="/examples/index.html") Examples
                                 li.c-side-menu__item(class=pathname.match(/prototypes\/index/) ? "c-side-menu__item--active" : "")
                                     a.c-side-menu__link(href="/prototypes/index.html") Prototypes
-                                li.c-side-menu__item(class=pathname.match(/examples\/design-tests/) ? "c-side-menu__item--active" : "")
-                                    a.c-side-menu__link(href="/examples/design-tests.html") Design tests
 
                 .o-grid-col-bp3-9
                     block subContent
                         .c-content
 
-                            h2 Example templates
+                            h2 Examples
+
+                            p
+
+                            h2 Example pages
 
                             p You can reference the following example templates to see how to use the components in practice.
 
@@ -68,3 +70,15 @@ block content
                                 li: a(href="/blog/1970/01/01/static-binaries--eccentric.html") Eccentric
                                 li: a(href="/blog/1970/01/01/static-binaries--eccentric-header.html") Eccentric (header too)
                                 li: a(href="/blog/1970/01/01/static-binaries--left.html") Left-aligned
+
+                            h2 Design tests
+                         
+                            p These tests are mostly used as “design unit tests” to see if the system is functioning correctly. If you are not actively developing the design system, feel free to ignore this.
+                         
+                            ul
+                                li: a(href="/examples/design-tests/figure-figcaption.html") Figure/figcaption
+                                li: a(href="/examples/design-tests/video.html") Responsive video and images
+                                li: a(href="/examples/design-tests/quotations.html") Quotations
+                                li: a(href="/examples/design-tests/tables.html") Tables in content
+                                li: a(href="/examples/design-tests/type-test.html") Type test
+                                li: a(href="/examples/design-tests/display-test.html") Display test
