@@ -1,0 +1,102 @@
+extends /templates/_layouts/app
+
+block append pageVariables
+    - var moduleTitle = "Main header + toolbar"
+    - var fullScroll = true
+
+block content
+    .c-navbar.c-navbar--bordered-bottom
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    a.c-button.c-button--icon.c-button--borderless(href="#")
+                        .c-button__content
+                            +icon('arrow-left')
+                            .u-sr-accessible Back
+                .c-toolbar__item
+                        h2.c-toolbar__title Toolbar title
+
+            .c-toolbar__right
+                .c-toolbar__item
+                    .c-button-toolbar
+                        +c-button({}) Cancel
+                        +c-button({skin: 'primary', icon: 'save'}) Save
+    .c-app-layout-inner
+        .c-app-layout-inner__sidebar
+            ul.c-side-menu
+                li.c-side-menu__item.c-side-menu__item--active
+                    a.c-side-menu__link(href="#") Quotes &amp; invoices
+                li.c-side-menu__item
+                    a.c-side-menu__link(href="#") Funding
+                li.c-side-menu__item
+                    a.c-side-menu__link(href="#") Expenses
+
+        .c-app-layout-inner__content
+            .u-scroll-wrapper
+                .u-scroll-wrapper-body
+                    .o-container.o-container--large
+                        .o-container-vertical
+
+                            style canvas { display: block; }
+                            <canvas id="canvas" width="640" height="480"></canvas>
+                            script.
+                                const canvas = document.getElementById('canvas');
+                                const gl = canvas.getContext('webgl2');
+                         
+                                const vertexShaderSource = `#version 300 es
+                                precision mediump float;
+                         
+                                in vec2 position;
+                         
+                                void main() {
+                                    gl_Position = vec4(position, 0.0, 1.0);
+                                }
+                                `;
+                         
+                                const fragmentShaderSource = `#version 300 es
+                                precision mediump float;
+                         
+                                out vec4 color;
+                         
+                                void main() {
+                                    color = vec4(1.0, 0.0, 0.0, 1.0); // Set the whole screen red
+                                }
+                                `;
+                         
+                                // Create, compile, and link shaders
+                                const vertexShader = gl.createShader(gl.VERTEX_SHADER);
+                                gl.shaderSource(vertexShader, vertexShaderSource);
+                                gl.compileShader(vertexShader);
+                         
+                                const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+                                gl.shaderSource(fragmentShader, fragmentShaderSource);
+                                gl.compileShader(fragmentShader);
+                         
+                                const program = gl.createProgram();
+                                gl.attachShader(program, vertexShader);
+                                gl.attachShader(program, fragmentShader);
+                                gl.linkProgram(program);
+                         
+                                gl.viewport(0, 0, canvas.width, canvas.height);
+                                gl.clearColor(0, 0, 0, 1);
+                                gl.clear(gl.COLOR_BUFFER_BIT);
+                         
+                                // Create a fullscreen quad
+                                const numComponents = 2; // x and y components
+                                const vertices = new Float32Array([
+                                    -1, -1,
+                                    1, -1,
+                                    -1, 1,
+                                    1, 1
+                                ]);
+                                const numVertices = vertices.length / numComponents;
+                         
+                                const vertexBuffer = gl.createBuffer();
+                                gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+                                gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+                         
+                                gl.useProgram(program);
+                                const positionAttribLocation = gl.getAttribLocation(program, "position");
+                                gl.vertexAttribPointer(positionAttribLocation, 2, gl.FLOAT, false, 0, 0);
+                                gl.enableVertexAttribArray(positionAttribLocation);
+                                gl.drawArrays(gl.TRIANGLE_STRIP, 0, numVertices);
