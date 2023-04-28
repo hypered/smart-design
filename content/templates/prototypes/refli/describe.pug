@@ -1,0 +1,36 @@
+extends /templates/_layouts/main
+
+block append pageVariables
+    - var moduleTitle = "Home"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
+
+block body
+    header#header
+        .o-container
+            include /templates/_includes/main-header--page
+
+    main
+        .o-container.o-container--flex
+            .c-design-system-home-hero.u-padding-vertical-xl
+                .o-grid
+                    .o-grid-col-bp3-6
+                        .o-flex.o-flex.o-flex--vertical-center(style="height: 100%;")
+                            .c-content
+                                h1 Compute a gross-to-net salary conversion
+                                p Using the form on this page, you can compute a net salary and its associated professional withholding tax and social security contributions.
+                    .o-grid-col-bp3-6
+                        .c-panel.u-spacer-bottom
+                            .c-panel__body
+                                form(method="POST")
+                                    .o-form-group-layout.o-form-group-layout--standard
+                                        .o-form-group
+                                            label.o-form-group__label(for="gross-amount") Gross monthly salary
+                                            .c-input-group
+                                                .c-input-group__input
+                                                    input.c-input(type="number" id="gross-amount")
+                                                .c-input-group__append €
+                                        .u-spacer-bottom
+                                        button.c-button.c-button--primary(type="submit")
+                                            span.c-button__content
+                                                span.c-button__label Compute
+                                                +icon('arrow-right')
