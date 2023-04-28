@@ -1,0 +1,23 @@
+extends /templates/_layouts/main
+
+block append pageVariables
+    - var moduleTitle = "Home"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
+
+block body
+    header#header
+        .o-container
+            include /templates/_includes/main-header--page
+
+    main
+        .o-container.o-container--flex
+            .c-design-system-home-hero.u-padding-vertical-xl
+                .o-grid
+                    .o-grid-col-bp3-6
+                        .o-flex.o-flex.o-flex--vertical-center(style="height: 100%;")
+                            .c-content
+                                h1 Exploring compensation calculation in Belgium
+                                p Refli's mission is to make payroll calculation rules in Belgium accessible, by providing documentation, data, and calculation tools all on one platform. Our goal is to be useful to a wide audience, including students, payroll professionals and software developers alike.
+
+                                p We believe that even the most complex concepts can be made understandable, and we're committed to breaking down barriers in payroll calculation.
+                    .o-grid-col-bp3-6
