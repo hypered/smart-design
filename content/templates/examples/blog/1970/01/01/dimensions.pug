@@ -1,0 +1,58 @@
+extends /templates/_layouts/page
+
+block append pageVariables
+    - var moduleTitle = "Dimensions"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
+
+block content
+    .o-container.o-container--medium.o-container--left
+        article.c-blog-article
+            .c-blog-article__header
+                h1.c-d-h1 Dimensions
+                p January 01, 1970
+            .c-blog-article__content
+                .c-content
+                    script.
+                      function displayViewportDimensions() {
+                        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                        const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                        document.getElementById('dimensions').innerHTML = `${width}px × ${height}px`;
+                      }
+                      window.addEventListener('resize', displayViewportDimensions);
+                      window.addEventListener('DOMContentLoaded', displayViewportDimensions);
+                    style.
+                      .viewport {
+                        position: fixed;
+                        top: 0.2rem;
+                        right: 14rem;
+                      }
+                    span#dimensions.viewport
+                    span.mq MQ:
+
+                    p This page shows the current break point and the current viewport dimensions (in the upper right corner of the screen). It also has some content to better visualize how much space some things take.
+
+                    p For instance, by comparing the rendering of this page on a smartphone and within a browser in "Responsive design mode", we noticed some differences. It turned out that the smartphone's browser was configured to scale text content at 110%.
+
+                    p The following rule should go against the edge of the screen.
+
+    .u-placeholder-l.bg-dimensions
+
+    .o-container.o-container--medium.o-container--left
+        article.c-blog-article
+            .c-blog-article__content
+                .c-content
+                    p The following rule should take only a portion of the page (the same has a typical blog post content).
+                    .u-placeholder-l.bg-dimensions
+
+                    p We also show a code block with a monospace font.
+                    pre
+                      code.
+                                10        20        30        40        50
+                        1234567890
+                                  1234567890
+                                            1234567890
+                                                      1234567890
+                                                                1234567890
+                    hr.u-spacer-bottom-m
+
+                    p Related: <a href="media-queries.html">Media queries</a>
