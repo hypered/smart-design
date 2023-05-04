@@ -1,0 +1,26 @@
+extends /templates/_layouts/main
+
+block append pageVariables
+    - var moduleTitle = "Placeholders test"
+
+block body
+    div(style="padding: 40px; padding-bottom: 0px;")
+        .c-text
+            h1 Placeholders
+            p We have "spacers" utility classes. They uses margins and padding to provide additional white space around elements. Here we show corresponding placeholders (that can stand on their own, as they define their height instead of margins and padding).
+    .o-container
+        .o-container-vertical
+            p <code>u-placeholder-xs</code>
+            .u-placeholder-xs
+
+            p <code>u-placeholder-s</code>
+            .u-placeholder-s
+
+            p <code>u-placeholder</code>
+            .u-placeholder
+
+            p <code>u-placeholder-l</code>
+            .u-placeholder-l
+
+            p <code>u-placeholder-xl</code>
+            .u-placeholder-xl
