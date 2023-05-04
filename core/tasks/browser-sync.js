@@ -11,6 +11,7 @@ if (process.env.NODE_ENV == "production") {
 
 module.exports = function () {
   return browserSync.init({
+    browser: [], // Don't automatically open a browser.
     files: [
       path.join(paths.compiled.path, '**/*'),
       '!**/*.map',
