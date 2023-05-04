@@ -1,0 +1,29 @@
+extends /templates/_layouts/app
+
+block append pageVariables
+    - var moduleTitle = "Editor"
+    - var state = "filled"
+
+block content
+    .c-navbar.c-navbar--bordered-bottom
+        .c-toolbar
+            .c-toolbar__left
+                .c-toolbar__item
+                    h2.c-toolbar__title Editor
+
+    .u-scroll-wrapper-body
+        .o-grid
+            .o-grid-col-bp3-6
+                .o-container.o-container--large
+                    .o-container-vertical
+                        #editor
+
+            .o-grid-col-bp3-6
+                .u-spacer-l
+                    .c-panel
+                        .o-form-group-layout.o-form-group-layout--horizontal
+                          .c-panel__body
+    //.
+      See https://codemirror.net/try/?example=Single-line%20editor
+      See view-source:https://codemirror.net/try/try.js
+    script(src='/js/editor.js')

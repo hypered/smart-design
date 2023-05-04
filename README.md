@@ -77,3 +77,16 @@ pandoc --standalone --template template.html display-test.md > output.html
 The resulting file should render in the browser exactly as the `c-content`
 [example
 page](https://design.smart.coop/development/design-tests/display-test.html).
+
+
+# CodeMirror
+
+There is some experiment with CodeMirror in `editor.mjs`. It's not built using
+Bedrock. Currently, it's built and copied into place manually:
+
+
+```
+$ node_modules/.bin/rollup editor.mjs \
+  -f iife -o editor.js -p @rollup/plugin-node-resolve
+$ cp editor.js content/js/
+```
