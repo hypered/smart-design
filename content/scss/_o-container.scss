@@ -51,6 +51,12 @@ $o-container-side-gap: 1.2rem !default; // Should be 1/2 of grid col gap
   max-width: $o-container-max-width-large;
 }
 
+.o-container--full {
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
 .o-container--flex {
   flex: 1;
 }

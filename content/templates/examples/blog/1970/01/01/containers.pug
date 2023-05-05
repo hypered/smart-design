@@ -1,0 +1,52 @@
+extends /templates/_layouts/page
+
+block append pageVariables
+    - var moduleTitle = "Containers"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
+
+block content
+    .o-container.o-container--medium.o-container--left
+        article.c-blog-article
+            .c-blog-article__header
+                h1.c-d-h1 Containers
+                p January 01, 1970
+            .c-blog-article__content
+                .c-content
+
+                    p This page shows example <a href="/components/o-container.html">container</a> objects. An additional <code>.bg-bands</code> class is added to better see each example extent.
+
+    .o-container.o-container--small.bg-bands
+        p This paragraph is within a <code>.o-container--small</code> class.
+
+    .o-container.o-container--medium.bg-bands
+        p This paragraph is within a <code>.o-container--medium</code> class.
+
+    .o-container.o-container--large.bg-bands
+        p This paragraph is within a <code>.o-container--large</code> class.
+
+    .o-container.bg-bands
+        p This paragraph is within a <code>.o-container</code> class.
+
+    .o-container.o-container--full.bg-bands
+        p This paragraph is within a <code>.o-container</code> class with the `full` modifier.
+
+    .o-container.o-container--large.o-container--left.bg-bands
+        p This paragraph is within a <code>.o-container--large</code> class.
+
+    .o-container.o-container--medium.o-container--left.bg-bands
+        p This paragraph is within a <code>.o-container--medium</code> class.
+
+    .o-container.o-container--small.o-container--left.bg-bands
+        p This paragraph is within a <code>.o-container--small</code> class.
+
+    .o-container.o-container--small.o-container--left.bg-bands
+        .o-container-vertical
+            p This paragraph is also within a <code>.o-container--small</code> class within an additional vertical wrapper.
+
+    .o-container.o-container--medium.o-container--left
+        article.c-blog-article
+            .c-blog-article__content
+                .c-content
+                    hr.u-spacer-bottom-m
+
+                    p Related: <a href="media-queries.html">Media queries</a>
