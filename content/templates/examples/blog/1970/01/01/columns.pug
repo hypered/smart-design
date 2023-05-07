@@ -1,0 +1,71 @@
+extends /templates/_layouts/page
+
+block append pageVariables
+    - var moduleTitle = "Columns"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
+
+block content
+    .o-container.o-container--medium.o-container--left
+        article.c-blog-article
+            .c-blog-article__header
+                h1.c-d-h1 Columns
+                p January 01, 1970
+            .c-blog-article__content
+                .c-content
+
+                    p This page shows example <a href="/components/o-grid.html">columns</a> (grid) objects. Placeholders are used to take some (vertical) space, otherwise each row would be hidden.
+
+    .o-grid
+        .o-grid-col-6.bg-bands
+            .u-placeholder
+        .o-grid-col-6.bg-bands
+            .u-placeholder
+
+    .o-container-vertical
+        .o-container.o-container--medium.o-container--eccentric
+            .o-grid
+                .o-grid-col-6.bg-bands
+                    .u-placeholder
+                .o-grid-col-6.bg-bands
+                    .u-placeholder
+
+    .o-container-vertical
+        .o-container.o-container--large
+            .o-grid
+                .o-grid-col-6.bg-bands
+                    .u-placeholder
+                .o-grid-col-6.bg-bands
+                    .u-placeholder
+
+    .o-container-vertical
+        .o-container.o-container--large
+            .o-grid
+                .o-grid-col-4.bg-bands
+                    .u-placeholder
+                .o-grid-col-4.bg-bands
+                    .u-placeholder
+                .o-grid-col-4.bg-bands
+                    .u-placeholder
+
+    .o-container-vertical
+        .o-container.o-container--large
+            .o-grid
+                .o-grid-col-8.bg-bands
+                    .u-placeholder
+                .o-grid-col-4.bg-bands
+                    .u-placeholder
+
+    .o-container-vertical
+        .o-grid
+            .o-grid-col-3.bg-bands
+                .u-placeholder
+            .o-grid-col-9.bg-bands
+                .u-placeholder
+
+    .o-container.o-container--medium.o-container--left
+        article.c-blog-article
+            .c-blog-article__content
+                .c-content
+                    hr.u-spacer-bottom-m
+
+                    p Related: <a href="containers.html">Containers</a>
