@@ -1,0 +1,10 @@
+extends /templates/_layouts/main
+
+block append pageVariables
+    - var moduleTitle = "Footer example"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
+
+block body
+    main
+    footer#footer
+        include /templates/_includes/page-footer
