@@ -1,0 +1,28 @@
+extends /templates/_layouts/main
+
+block append pageVariables
+    - var moduleTitle = "1800"
+    - var bodyClass="o-flex o-flex--vertical u-maximize-height"
+
+block body
+    header#header
+        .o-container
+            include /templates/_includes/main-header--page
+
+    main
+        .o-grid
+            .o-grid-col-bp3-7
+              .o-container.o-container--medium.o-container--left
+                  .c-content
+                      h1 Compensation calculation
+                      p This page presents a computation of a monthly net salary given a <strong>gross</strong> salary of <strong>1800.00 EUR</strong> for an <strong>isolated employee</strong>, without disability, without children and without dependent persons. <i>The information on this page are given as is.</i>
+             
+                      .c-leader-line
+                          .c-leader-line-a Revenu brut
+                          .c-leader-line-b 1800.00 EUR
+                      .c-leader-line
+                          .c-leader-line-a Cotisations sociales personnelles
+                          .c-leader-line-b 0.00 EUR
+            .o-grid-col-bp3-5
+                  .c-content
+                      a(href="#") = Labourer is a blue collar worker

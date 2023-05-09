@@ -1,0 +1,31 @@
+/* Leader lines. Code from
+ * https://markentier.tech/posts/2021/03/responsive-toc-leader-lines-with-css/
+ */
+.c-leader-line {
+  display: grid;
+  grid-template-columns: auto max-content;
+  grid-template-areas: "a b";
+  align-items: end;
+  gap: 0 .25rem;
+}
+
+.c-leader-line-a {
+  grid-area: a;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-leader-line-a::after {
+  position: absolute;
+  padding-left: .25ch;
+  content: " . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . ";
+  text-align: right;
+}
+
+.c-leader-line-b {
+  grid-area: b;
+}
