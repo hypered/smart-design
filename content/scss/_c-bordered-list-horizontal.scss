@@ -2,6 +2,22 @@
   c-bordered-list-horizontal
    ========================================================================== */
 
+// TODO This one is not bordered, so doesn't match the filename.
+.c-list-horizontal {
+
+  display: flex;
+
+  li {
+    padding: .4rem 0.84rem;
+    &:first-child {
+      padding-left: 0rem;
+    }
+    a, span {
+      display: block;
+    }
+  }
+}
+
 .c-bordered-list-horizontal {
 
   display: flex;
