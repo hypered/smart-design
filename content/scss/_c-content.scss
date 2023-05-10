@@ -147,9 +147,12 @@
   }
 
   hr {
-    margin: 3.2rem 0;
+    color: $g-text-color;
+    background-color: $g-text-color;
+    width: 12.8rem;
     border: none;
-    border-bottom: 1px solid $color-gray-150;
+    height: .2rem;
+    margin: 3.4rem 0;
   }
 
 }
