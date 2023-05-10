@@ -178,6 +178,15 @@ $g-spacer-unit: 0.8rem !default;
   margin-bottom: $g-spacer-unit * 4 !important;
 }
 
+// Match u-spacer-bottom-m in hypered/design.
+.u-spacer-bottom-xxl {
+  margin-bottom: $g-spacer-unit * 6 !important;
+}
+// Match u-spacer-bottom-l in hypered/design.
+.u-spacer-bottom-xxxl {
+  margin-bottom: 5.6rem !important;
+}
+
 .u-spacer-bottom-auto {
   margin-bottom: auto !important;
 }
