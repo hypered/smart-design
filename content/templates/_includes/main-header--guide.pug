@@ -30,8 +30,6 @@
 
                     .c-design-system-nav__desktop
                         ul.c-pill-navigation
-                            li.c-pill-navigation__item
-                                a(href="/components/index.html") Components
                             li.c-pill-navigation__item.c-pill-navigation__item--has-child-menu
                                 // @todo now we are using menu.js, which is really meant for dropdowns. Make more accessible with aria-haspopup="true" aria-expanded="false", switch with JS?
                                 button(type="button" data-menu="menu3" data-menu-samewidth="true") Templates
@@ -40,3 +38,5 @@
                                         a.c-menu__label(href="/examples/index.html") Example templates
                                     li.c-menu__item
                                         a.c-menu__label(href="/prototypes/index.html") Prototypes
+                            li.c-pill-navigation__item
+                                a(href="/components/index.html") Components
