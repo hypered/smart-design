@@ -1,0 +1,18 @@
+// These debugging rules (together with foundations.scss) correspond to what is
+// used in foundations.pug.
+
+* {
+  outline: dashed blue;
+}
+
+html {
+  outline: dashed red;
+}
+
+body {
+  outline: dashed pink;
+}
+
+div {
+  outline: solid lightgrey;
+}
