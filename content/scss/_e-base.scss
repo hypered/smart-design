@@ -11,12 +11,8 @@ $g-base-background: #FFF !default;
 /* Elements
    ========================================================================== */
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
+// This should be defined in struct/foundations but it has not yet the
+// breakpoints.
 html {
   font-size: 54.16%; // 13px
   @media (min-width: $g-bp3) {
