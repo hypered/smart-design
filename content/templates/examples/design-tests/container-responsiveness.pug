@@ -1,0 +1,24 @@
+extends /templates/_layouts/main
+
+block append pageVariables
+    - var moduleTitle = "Container responsiveness"
+
+block body
+    div(style="padding: 40px; padding-bottom: 0px;")
+        .c-text
+            h1 Container responsiveness
+            p This shows how the Mono-designed containers work vs ours, in <code>struct</code>.
+    .o-container
+        .o-container-vertical
+            style.
+              .wrrrap {
+                width: 1028px;
+                margin: 0 auto;
+              }
+              iframe {
+                border: 2px solid #DDD;
+              }
+            .wrrrap
+              iframe(width=964, height=124, src="/examples/blog/1970/01/01/containers-responsiveness.html")
+            .wrrrap
+              iframe(width=964, height=124, src="/examples/blog/1970/01/01/containers-struct-responsiveness.html")

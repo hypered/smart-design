@@ -112,8 +112,9 @@ $g-headings-font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Se
 @import '_u-scroll-wrapper';
 @import "_u-bg";
 @import "_u-debug";
+@import "struct/u-debug";
 @import "_u-generic";
-@import "_u-placeholder";
+@import "struct/u-placeholder";
 @import "_u-spacer";
 @import "_u-shadow";
 @import "_u-text";

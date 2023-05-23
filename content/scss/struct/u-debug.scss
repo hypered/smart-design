@@ -1,0 +1,9 @@
+// Add a SVG background image representing a horizontal ruler.
+.bg-dimensions {
+  background: no-repeat url("/images/ruler.svg");
+}
+
+// Add a SVG background image representing gray diagonal bands.
+.bg-bands {
+  background: no-repeat url("/images/2560x1440-bands.svg");
+}

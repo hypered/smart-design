@@ -12,8 +12,45 @@ block content
                 p January 01, 1970
             .c-blog-article__content
                 .c-content
+                    p We start by revisiting the rules for the `div` in foundations, where we try to choose some good looking width for our main content. First let's see what we try to achieve.
 
-                    p This page shows example <a href="/components/o-container.html">container</a> objects. An additional <code>.bg-bands</code> class is added to better see each example extent.
+        style.
+          .wrrrap {
+            width: 1028px;
+            margin: 0 auto;
+          }
+          iframe {
+            border: 2px solid #DDD;
+          }
+        .wrrrap
+          iframe(width=964, height=161, src="/examples/blog/1970/01/01/containers-responsiveness.html")
+
+        article.c-blog-article
+            .c-blog-article__content
+                .c-content
+                    p We start with five `div`s: one that is supposed to extend from the left edge of the browser until the right edge, a similar one that preserves some space near the edges, and then three different sizes: large, medium, and small.
+
+                    p We replicate the HTML structure, and since the `o-container` CSS classes are not yet defined, our placeholders take the full width. (Above, the placeholders are slightly less tall too. This is because the original Mono rules redefine a rem to be less than 10px at samller screen sizes, and we use rem to specify the height of the placeholders.)
+
+        .wrrrap
+          iframe(width=964, height=124, src="/examples/blog/1970/01/01/containers-struct-responsiveness-1.html")
+
+        article.c-blog-article
+            .c-blog-article__content
+                .c-content
+                    h2 Result
+
+                    p The following shows the result. It should be open in its own fullscreen window. The unstyled `div` takes the full width. The normal `o-container` takes the full width minus a little gap. Then we have large, medium and small variants, all centered. Then again, the large, medium, and small variants, this time left-aligned on the centered large container (they are `eccentric`). Then again large, medium, and small variants, this time left-aligned on `o-container`. (The `eccentric` variants are left-aligned only at the minimum and maximum viewport width because the rates at which their left margin changes are not the same. It's normal when the container is large, but it's ugly when it becomes smaller before reaching the minimum.)
+
+        .wrrrap
+          iframe(width=964, height=268, src="/examples/blog/1970/01/01/containers-struct-responsiveness.html")
+
+        article.c-blog-article
+            .c-blog-article__content
+                .c-content
+                    h2 In action
+
+                    p We show example <a href="/components/o-container.html">container</a> objects right in this page (without using frames). An additional <code>.bg-bands</code> class is added to better see each example extent.
 
     .o-container.o-container--small.bg-bands
         p This paragraph is within a <code>.o-container--small</code> class.

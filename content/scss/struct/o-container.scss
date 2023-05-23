@@ -1,0 +1,39 @@
+:root {
+  --space-2xs-xl: clamp(1.8rem , 0.3391304347826086rem + 4.565217391304348vw, 6.0rem);
+  --space-eccentric-large: clamp(1.8rem , -56.1639344262295rem + 58.19672131147541vw, 16.0rem);
+  --space-eccentric-medium: clamp(1.8rem , -15.442857142857141rem + 25.357142857142854vw, 16.0rem);
+  --space-eccentric-small: clamp(1.8rem , -9.894117647058824rem + 20.88235294117647vw, 16.0rem);
+}
+
+.o-container {
+  width: calc(100% - var(--space-2xs-xl) * 2);
+  margin: 0 auto;
+}
+
+.o-container--large {
+  max-width: 96rem;
+}
+
+.o-container--medium {
+  max-width: 68rem;
+}
+
+.o-container--small {
+  max-width: 56rem;
+}
+
+.o-container--left {
+  margin-left: var(--space-2xs-xl);
+}
+
+.o-container--eccentric-large {
+  margin-left: var(--space-eccentric-large);
+}
+
+.o-container--eccentric-medium {
+  margin-left: var(--space-eccentric-medium);
+}
+
+.o-container--eccentric-small {
+  margin-left: var(--space-eccentric-small);
+}
