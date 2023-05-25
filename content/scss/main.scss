@@ -4,12 +4,8 @@
 /* Settings: preprocessor variables, colors, global settings
    ========================================================================== */
 @import "_s-colors";
-@import "_s-fonts-ibm-plex";
+@import "struct/ibm-plex";
 @import "_s-variables";
-
-/* Those are defined in _s-variables above. */
-$g-base-font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-$g-headings-font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
 /* Elements: element selectors, CMS-generated content
    ========================================================================== */
@@ -25,7 +21,6 @@ $g-headings-font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Se
 @import "_o-form-group";
 @import "_o-grid";
 @import "_o-svg-icon";
-
 
 /* Content styling (styling for base html elements)
    + helpers for article style content
