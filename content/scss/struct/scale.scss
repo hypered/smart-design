@@ -183,3 +183,20 @@ hr {
   flex-basis: calc((var(--measure) - 100%) * 999);
   flex-grow: 1;
 }
+
+
+.u-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.u-bar__left {
+}
+.u-bar__right {
+  ul li {
+    display: inline;
+  }
+  ul > * + * {
+    margin-left: 1em;
+  }
+}
