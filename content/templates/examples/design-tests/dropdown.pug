@@ -1,0 +1,95 @@
+doctype html
+html(dir="ltr", lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/struct/foundations.css")
+        link(rel="stylesheet", href="/css/struct/ibm-plex.css")
+        link(rel="stylesheet", href="/css/struct/scale.css")
+    body
+        .u-container
+            .c-text.flow-all
+                h1 Dropdown
+                p An implementation of a pure CSS, clickable dropdown. From https://stackoverflow.com/questions/44832572/pure-css-clickable-dropdown.
+
+                p It works by creating a focusable div, with CSS rules to show a list of links when focused. There is anoter focusable element that can "steal" the focus, when a second click arises. Some limitations: Using tab to select it doesn't work (if we allow that with e.g. `tabindex=1`, then a second tab closes it without moving to the next focusable element (Documentations here). The menu doesn't close when hitting Escape. It's possible to slect part of the text (Playground here, maybe it is solvable by better dimensioning the link within the div).
+
+            hr
+            style.
+                /* dd container */
+                .dropdown {
+                  display: inline-block;
+                  position: relative;
+                  margin: 10px;
+                }
+
+                /* button */
+                .dropbtn {
+                  padding: 12px 16px;
+                  color: black;
+                  cursor: pointer;
+                }
+
+                /* dd content */
+                .dropdown .dropdown-content {
+                  position: absolute;
+                  top: 0;
+                  background-color: white;
+                  min-width: 20ch;
+                  border: 2px solid #dddddd;
+                  z-index: 100000;
+                  visibility: hidden;
+                  opacity: 0;
+                }
+                .dropdown-content a {
+                  color: black;
+                  padding: 12px 16px;
+                  display: block;
+                  text-decoration: none;
+                }
+                .dropdown-content a:hover {
+                  background-color: #f2f2f2;
+                }
+
+                /* show dd content */
+                .dropdown:focus .dropdown-content {
+                  transform: translateY(40px);
+                  visibility: visible;
+                  opacity: 1;
+                }
+
+                .dropbtn:hover, .dropdown:focus .dropbtn {
+                  background-color: #f9f9f9;
+                }
+
+                /* mask to close menu by clicking on the button */
+                .dropdown .db2 {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  opacity: 1;
+                  cursor: pointer;
+                  z-index: 10;
+                  display: none;
+                }
+                .dropdown:focus .db2 {
+                  display: inline-block;
+                  margin-top: -16px;
+                  height: 50px;
+                  background-color: red;
+                  opacity: var(--db2-opacity, 0);
+                }
+                .debug {
+                  --db2-opacity: 0.8;
+                }
+            .dropdown(tabindex="-1")
+                i.db2(tabindex="-1")
+                a.dropbtn Playground
+                .dropdown-content
+                    a(href="#") Compute salaries
+                    a(href="#") Convert PDF invoices
+                    a(href="#") View CODA files
+
+            a(href="#") Documentation
