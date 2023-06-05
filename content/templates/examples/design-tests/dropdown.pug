@@ -10,28 +10,51 @@ html(dir="ltr", lang="en")
         .u-container
             .c-text.flow-all
                 h1 Dropdown
-                p An implementation of a pure CSS, clickable dropdown. From https://stackoverflow.com/questions/44832572/pure-css-clickable-dropdown.
+                p An implementation of a pure CSS, clickable dropdown. From <a href="https://stackoverflow.com/questions/44832572/pure-css-clickable-dropdown">Stack Overflow</a>.
 
-                p It works by creating a focusable div, with CSS rules to show a list of links when focused. There is anoter focusable element that can "steal" the focus, when a second click arises. Some limitations: Using tab to select it doesn't work (if we allow that with e.g. `tabindex=1`, then a second tab closes it without moving to the next focusable element (Documentations here). The menu doesn't close when hitting Escape. It's possible to slect part of the text (Playground here, maybe it is solvable by better dimensioning the link within the div).
+                p It works by creating a focusable div, with CSS rules to show a list of links when focused. There is anoter focusable element that can "steal" the focus, when a second click arises. Some limitations: Using tab to select it doesn't work (if we allow that with e.g. `tabindex=1`, then a second tab closes it without moving to the next focusable element (Documentations here). The menu doesn't close when hitting Escape. It's possible to slect part of the text (Playground here, maybe it is solvable by better dimensioning the link within the div). If the link goes within the page, the dropdown stays open.
 
             hr
             style.
-                /* dd container */
-                .dropdown {
+                /* The menu-item container div. This can contain a dropdown button,
+                   or a simple link.*/
+                .menu-item {
                   display: inline-block;
                   position: relative;
-                  margin: 10px;
                 }
 
-                /* button */
-                .dropbtn {
+                /* Style similarly either a dropdown button or a simple link.
+                   The dropdown case accomodate more left padding for a small down
+                   arrow. */
+                .menu-dropdown {
+                  padding: 12px 16px 12px 28px;
+                  color: black;
+                  cursor: pointer;
+                }
+                .menu-link {
                   padding: 12px 16px;
                   color: black;
                   cursor: pointer;
                 }
 
-                /* dd content */
-                .dropdown .dropdown-content {
+                /* Add a small down arrow to the dropdown button. */
+                .menu-dropdown:before {
+                  pointer-events: none;
+                  content: ' ';
+                  position: absolute;
+                  left: 1.4rem;
+                  top: 0.7rem;
+                  width: 0;
+                  height: 0;
+                  border-width: 1rem;
+                  border: 0.5rem solid black;
+                  border-bottom-color: transparent;
+                  border-left-color: transparent;
+                  border-right-color: transparent;
+                }
+
+                /* Style the dropdown content. */
+                .menu-item .menu-dropdown-content {
                   position: absolute;
                   top: 0;
                   background-color: white;
@@ -41,29 +64,30 @@ html(dir="ltr", lang="en")
                   visibility: hidden;
                   opacity: 0;
                 }
-                .dropdown-content a {
+                .menu-item a {
                   color: black;
-                  padding: 12px 16px;
-                  display: block;
                   text-decoration: none;
                 }
-                .dropdown-content a:hover {
+                .menu-dropdown-content a {
+                  padding: 12px 16px;
+                  display: block;
+                }
+                .menu-dropdown-content a:hover {
                   background-color: #f2f2f2;
                 }
 
-                /* show dd content */
-                .dropdown:focus .dropdown-content {
+                /* Show the dropdown content when focused. */
+                .menu-item:focus .menu-dropdown-content {
                   transform: translateY(40px);
                   visibility: visible;
                   opacity: 1;
                 }
-
-                .dropbtn:hover, .dropdown:focus .dropbtn {
+                .menu-link:hover, .menu-dropdown:hover, .menu-item:focus .menu-dropdown {
                   background-color: #f9f9f9;
                 }
 
-                /* mask to close menu by clicking on the button */
-                .dropdown .db2 {
+                /* Mask to close the dropdown by stealing the focus when clicked. */
+                .menu-item .menu-mask {
                   position: absolute;
                   top: 0;
                   right: 0;
@@ -74,22 +98,30 @@ html(dir="ltr", lang="en")
                   z-index: 10;
                   display: none;
                 }
-                .dropdown:focus .db2 {
+                .menu-item:focus .menu-mask {
                   display: inline-block;
                   margin-top: -16px;
                   height: 50px;
                   background-color: red;
-                  opacity: var(--db2-opacity, 0);
+                  opacity: var(--menu-mask-opacity, 0);
                 }
-                .debug {
-                  --db2-opacity: 0.8;
-                }
-            .dropdown(tabindex="-1")
-                i.db2(tabindex="-1")
-                a.dropbtn Playground
-                .dropdown-content
-                    a(href="#") Compute salaries
-                    a(href="#") Convert PDF invoices
-                    a(href="#") View CODA files
 
-            a(href="#") Documentation
+                /* Show the menu mask (to make sure it has the same size as the dropdown
+                   button. (Add this to .menu-mask.) */
+                .menu-mask--debug {
+                  --menu-mask-opacity: 0.8;
+                }
+            .u-bar__right
+                ul
+                    li
+                        .menu-item(tabindex="-1")
+                            i.menu-mask(tabindex="-1")
+                            a.menu-dropdown Playground
+                            .menu-dropdown-content
+                                a(href="#") Compute salaries
+                                a(href="#") Convert PDF invoices
+                                a(href="#") View CODA files
+
+                    li
+                        .menu-item
+                            a(href="#").menu-link Documentation

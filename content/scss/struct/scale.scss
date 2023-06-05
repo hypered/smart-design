@@ -87,7 +87,8 @@ h4 {font-size: var(--step-c-1);}
 p {font-size: var(--step-c-0); line-height: 1.5em;}
 p small {font-size: var(--step-c--1); line-height: 1.5em;}
 .limit-p p {max-width: 42em;}
-a {color: blue;}
+.c-text a {color: blue; text-decoration: none;}
+.c-content a {color: blue; text-decoration: none;}
 code {background-color: #f2f2f2;}
 hr {
   font-size: var(--step-c-4); /* like h1, for flow spacing */
