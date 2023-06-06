@@ -191,6 +191,26 @@ hr {
 }
 
 
+/* Top-level wrapper to push the footer at the bottom of the viewport.
+   This is useful when there is not enough content to push the footer
+   down the page.
+   This should be used on the main div, or directly on the body (and
+   should directly enclose the footer).
+
+   This could be extended to vertically center some main content:
+   https://github.com/aprietof/every-layout/blob/master/layouts.css#L156-L185
+*/
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.cover > footer {
+  margin-top: auto;
+}
+
+
+
 .u-bar {
   display: flex;
   justify-content: space-between;
