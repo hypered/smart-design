@@ -16,104 +16,11 @@ html(dir="ltr", lang="en")
 
             hr
 
-            mixin items
-                ul
-                    li
-                        .menu-item(tabindex="-1")
-                            i.menu-mask(tabindex="-1")
-                            a.menu-dropdown Playground
-                            .menu-dropdown-content
-                                a(href="#") Compute salaries
-                                a(href="#") Convert PDF invoices
-                                a(href="#") View CODA files
-
-                    li
-                        .menu-item
-                            a(href="#").menu-link Documentation
-
             .u-bar__right
-                +items
+                include /templates/_includes/main-header--page-struct
             hr
 
         .u-container
             .c-text.flow-all
-                p In action:
-            hr
-
-        header
-            .u-container
-                .u-bar
-                    .u-bar__left
-                        a(href="#")
-                            img(src="/images/logo.svg" alt="Refli")
-                    .u-bar__right
-                        +items
-
-        .u-container
-            style.
-              .u-step-d-3 {
-                font-size: clamp(1.7280rem, -0.8196rem + 7.9612vw, 10.9630rem);
-                letter-spacing: 0;
-              }
-            .flow-all
-                h1.u-step-d-3 Exploring compensation calculation in Belgium
-            .switcher
-                .flow-all
-                    p Refli's mission is to make payroll calculation rules in Belgium accessible, by providing documentation, data, and calculation tools all on one platform. Our goal is to be useful to a wide audience, including students, payroll professionals and software developers alike.
-
-                    p We believe that even the most complex concepts can be made understandable, and we're committed to breaking down barriers in payroll calculation.
-                div
-                    // empty
-            .switcher
-                .flow-all
-                    h1 Exploring compensation calculation in Belgium
-                    p Refli's mission is to make payroll calculation rules in Belgium accessible, by providing documentation, data, and calculation tools all on one platform. Our goal is to be useful to a wide audience, including students, payroll professionals and software developers alike.
-
-                    p We believe that even the most complex concepts can be made understandable, and we're committed to breaking down barriers in payroll calculation.
-                div
-                    // empty
-
-        footer
-            .u-container
-                hr
-                .switcher
-                    .c-content.flow
-                        h4 Refli
-                        ul
-                            li
-                                a(href="/about.html") About
-                            li
-                                a(href="/changelog.html") Changelog
-                            li
-                                a(href="/contact.html") Contact
-                            li
-                                a(href="/disclaimer.html") Disclaimer
-                            li
-                                a(href="/documentation.html") Documentation
-                    .c-content.flow
-                        h4 Social security contributions
-                        ul
-                            li
-                                a(href="#") Personal contributions
-                            li
-                                a(href="#") Employment bonus
-                            li
-                                a(href="#") Special contribution
-                    .c-content.flow
-                        h4 Professional tax withholding
-                        ul
-                            li
-                                a(href="#") Fixed professional fees
-                            li
-                                a(href="#") Basic scale
-                            li
-                                a(href="#") Reductions for dependant children
-                        h4 Rounding method
-                        ul
-                            li
-                                a(href="#") Rounding
-                            li
-                                a(href="#") Professional tax withholding details
-
-                hr
-                span © Hypered SRL, 2023.
+                p In action: <a href="refli-index-struct.html">Refli homepage</a>.
+                p In action: <a href="refli-index-struct-constant.html">Refli homepage (constant ratio)</a>.
