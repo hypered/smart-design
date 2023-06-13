@@ -210,6 +210,13 @@ hr {
 }
 
 
+/* Similar to Panel in Mono's work ? */
+.box {
+  padding: var(--space-s);
+  border: 2px solid black;
+}
+
+
 
 .u-bar {
   display: flex;
@@ -325,4 +332,53 @@ hr {
    button. (Add this to .menu-mask.) */
 .menu-mask--debug {
   --menu-mask-opacity: 0.8;
+}
+
+
+/* -----------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+
+.c-button {
+  appearance: none;
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  display: inline-flex;
+}
+
+// Button label
+.c-button span {
+  white-space: nowrap;
+}
+
+// Button icon
+.c-button svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+// Primary button variant
+.c-button--primary {
+  background: #000;
+  color: #fff;
+
+  svg * {
+    fill: currentColor;
+  }
+
+  &:hover {
+    background: #aaa;
+    border-color: #aaa;
+  }
+
+  &:active {
+    background: #999;
+    border-color: #999;
+  }
 }
