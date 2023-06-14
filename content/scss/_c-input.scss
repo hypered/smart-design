@@ -7,7 +7,6 @@
 /* Variables
    ========================================================================== */
 
-$c-input-border-radius: 0.3rem !default;
 $c-input-dark-text-color: $color-semantic-body-text !default;
 $c-input-focus-icon-color: $color-semantic-icon !default;
 $c-input-bg-color: #fff !default;
@@ -32,9 +31,9 @@ $c-input-padding: 0.8rem !default;
    ========================================================================== */
 
 .c-input {
-  background: $c-input-bg-color;
-  border: 1px solid white;
-  border-bottom: 1px solid $c-input-border-color;
+  background: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  border-bottom: 1px solid #ddd;
   font-size: inherit;
   height: 3.6rem;
   padding: $c-input-padding;
@@ -113,18 +112,18 @@ textarea.c-input--h-large { height: 20rem; }
   height: 3.6rem;
   width: 3.6rem;
   min-width: 3.6rem;
-  color: $color-gray-500;
-  background: $color-gray-50;
+  color: black;
+  background: #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 0.8rem;
-  border: 1px solid $color-gray-200;
+  border: 1px solid #f4f4f4;
+  border-bottom: 1px solid #ddd;
   position: absolute;
 }
 
 .c-input-group__prepend {
-  border-radius: 0.4rem 0 0 0.4rem;
   border-right: none;
 
   ~ .c-input-group__input {
@@ -133,17 +132,14 @@ textarea.c-input--h-large { height: 20rem; }
 }
 
 .c-input-group__append {
-  border-radius: 0 0.4rem 0.4rem 0;
   border-left: none;
   right: 0;
 }
 
 .c-input-group > .c-input-group__input:not(:last-child) .c-input {
-  border-radius: 0.4rem 0 0 0.4rem;
 }
 
 .c-input-group > .c-input-group__input:not(:first-child) .c-input {
-  border-radius: 0 0.4rem 0.4rem 0;
 }
 
 .c-input-group--error,
