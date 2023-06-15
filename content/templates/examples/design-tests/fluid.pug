@@ -33,7 +33,7 @@ html(dir="ltr", lang="en")
 
         .u-container
             h1 Box
-            .box
+            .box.max-64rem
                 form.c-text.flow
                     h4 Gross monthly salary
                     div
@@ -41,6 +41,21 @@ html(dir="ltr", lang="en")
                     button.c-button.c-button--primary(type="submit")
                         span Compute
                         svg(width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg")
+                            <path d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z" fill="#595959"/>
+
+        .u-container
+            .switcher.switch-at-60rem
+                .flow
+                    h1 Compute a gross-to-net salary conversion
+                    p Using the form on this page, you can compute a net salary and its associated professional withholding tax and social security contributions.
+                .box
+                    form.c-text.flow
+                        h4 Gross monthly salary
+                        div
+                            input.c-input
+                        button.c-button.c-button--primary(type="submit")
+                            span Compute
+                            svg(width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg")
                                 <path d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z" fill="#595959"/>
 
         header
@@ -158,9 +173,24 @@ html(dir="ltr", lang="en")
                     .c-text
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+        hr.hr-full
+
         .u-container
-            h1 Spacing
-            p TODO This needs some automated code generation (to generate the right values as above).
+            .c-text.flow-all
+                h1 u-flow-c-4
+                p This demonstrates the u-flow-c-4 utility that should match a h1 heading in a flow or flow-all.
+            .switcher
+                .flow-all
+                    h1 Step C 4
+                .flow.u-flow-c-4
+                    h1 Step C 4
+
+        hr.hr-full
+
+        .u-container
+            .c-text.flow-all
+                h1 Spacing
+                p TODO This needs some automated code generation (to generate the right values as above).
             h1 Grid
             p The grid has 12 columns. The outer gap are not part of the grid; they come from the surrounding <code>.u-container</code>.
         .u-container.debug-gap-color

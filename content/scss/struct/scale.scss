@@ -103,6 +103,9 @@ hr {
   height: .2rem;
   margin: 3.4rem 0;
 }
+.hr-full {
+  width: 100%;
+}
 .c-text h1 {font-size: var(--step-a-4);}
 .c-text h2 {font-size: var(--step-a-3);}
 .c-text h3 {font-size: var(--step-a-2);}
@@ -162,6 +165,14 @@ hr {
   --flow-space: 1.4em;
   margin-top: var(--flow-space);
 }
+// Similar to the margin added by `flow` for a h1 heading at scale C.
+// `flow` sets the margin to be 1.4em, while here we're not using ems,
+// but it seems to work.
+.u-flow-c-4 {
+  margin-top: calc(var(--step-c-4) * 1.4);
+}
+
+
 .with-sidebar {
   display: flex;
   flex-wrap: wrap;
@@ -190,6 +201,11 @@ hr {
   flex-grow: 1;
 }
 
+.switch-at-60rem > * {
+  --measure: 60rem;
+  flex-basis: calc((var(--measure) - 100%) * 999);
+}
+
 
 /* Top-level wrapper to push the footer at the bottom of the viewport.
    This is useful when there is not enough content to push the footer
@@ -214,6 +230,12 @@ hr {
 .box {
   padding: var(--space-s);
   border: 2px solid black;
+}
+// Tachyons would call this mw8 or something.
+// Naming-wise, I would prefer something like t-shirt sizes (small, large, ...)
+// instead of some specific value (like o-containers).
+.max-64rem {
+  max-width: 64rem;
 }
 
 
