@@ -222,6 +222,52 @@ html(dir="ltr", lang="en")
 
         .u-container
             .c-text.flow-all
+                h1 Placeholders
+                p Bordered placeholders to visualize layouts.
+            style.
+              .b-120x60 {
+                width: 120px;
+                height: 60px;
+                border: 2px solid black;
+              }
+              .b-120x60:before {
+                content: '120x60';
+              }
+              .b-240x60 {
+                width: 240px;
+                height: 60px;
+                border: 2px solid black;
+              }
+              .b-240x60:before {
+                content: '240x60';
+              }
+              .b-l-s {
+                width: var(--space-l);
+                height: var(--space-s);
+                border: 2px solid black;
+              }
+              .b-l-s:before {
+                content: 'l-s';
+              }
+              .b-xl-xl {
+                width: var(--space-xl);
+                height: var(--space-xl);
+                border: 2px solid black;
+              }
+              .b-xl-xl:before {
+                content: 'xl-xl';
+              }
+            .b-120x60
+            .b-l-s
+            .b-xl-xl
+            .u-bar
+                .b-120x60
+                .b-240x60
+
+        hr.hr-full
+
+        .u-container
+            .c-text.flow-all
                 h1 Grid
                 p The grid has 12 columns. The outer gaps are not part of the grid; they come from the surrounding <code>.u-container</code>.
         .u-container.debug-gap-color.u-flow-c-0
