@@ -41,6 +41,17 @@ body {font-family: 'IBM Plex Sans';}
 }
 
 :root {
+  --step-d-5: clamp(2.4883rem, -2.2017rem + 14.6564vw, 19.4897rem);
+  --step-d-4: clamp(2.0736rem, -1.3867rem + 10.8135vw, 14.6173rem);
+  --step-d-3: clamp(1.7280rem, -0.8196rem + 7.9612vw, 10.9630rem);
+  --step-d-2: clamp(1.4400rem, -0.4310rem + 5.8467vw, 8.2222rem);
+  --step-d-1: clamp(1.2000rem, -0.1701rem + 4.2816vw, 6.1667rem);
+  --step-d-0: clamp(1.0000rem, 0.0000rem + 3.1250vw, 4.6250rem);
+  --step-d--1: clamp(0.8333rem, 0.1063rem + 2.2719vw, 3.4688rem);
+  --step-d--2: clamp(0.6944rem, 0.1683rem + 1.6441vw, 2.6016rem);
+}
+
+:root {
   --space-3xs: clamp(0.4000rem, 0.3724rem + 0.0862vw, 0.5000rem);
   --space-2xs: clamp(0.8000rem, 0.7448rem + 0.1724vw, 1.0000rem);
   --space-xs: clamp(1.2000rem, 1.1172rem + 0.2586vw, 1.5000rem);
@@ -149,6 +160,12 @@ hr {
 .u-step-c-0 {font-size: var(--step-c-0);}
 .u-step-c--1 {font-size: var(--step-c--1);}
 .u-step-c--2 {font-size: var(--step-c--2);}
+.u-step-d-5 {font-size: var(--step-d-5);}
+.u-step-d-4 {font-size: var(--step-d-4);}
+.u-step-d-3 {font-size: var(--step-d-3);}
+.u-step-d-2 {font-size: var(--step-d-2);}
+.u-step-d-1 {font-size: var(--step-d-1);}
+.u-step-d-0 {font-size: var(--step-d-0);}
 .label-step {font-size: 1.4rem; color: grey;}
 .debug-gap-color {background: #eed9eb;}
 .debug-column-color > span {font-size: 1.4rem; font-family: monospace; background: white;}
